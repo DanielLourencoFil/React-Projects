@@ -1,0 +1,117 @@
+/* VARIABLES */
+:root {
+	--primary-color-100: #fff;
+	--primary-color-500: #ddd;
+	--primary-color-700: #777;
+	--primary-color-900: #ff0000;
+	--secondary-color-900: rgba(255, 0, 0, 0.635);
+	--box-shadow-500: 1px 1px 10px -2px rgb(90, 90, 90);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* REMINDER APP */
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	min-height: 100vh;
+	background: var(--primary-color-500);
+}
+.app-container {
+	margin: 3rem 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	width: 65%;
+	max-width: 600px;
+	padding: 2rem 0;
+	gap: 2rem;
+	border-radius: 0.5rem;
+	background-color: white;
+	box-shadow: var(--box-shadow-500);
+}
+
+.birthdays-counter {
+	width: 90%;
+	text-align: right;
+	font-size: 1.25rem;
+	letter-spacing: 1px;
+	color: var(--primary-color-700);
+}
+.btn {
+	width: 90%;
+	padding: 0.5rem 1rem;
+	font-size: 1.25rem;
+	border-radius: 0.35rem;
+	border: none;
+	background-color: var(--primary-color-500);
+	box-shadow: var(--box-shadow-500);
+	cursor: pointer;
+	will-change: contents;
+	transition: all 0.3s;
+}
+.btn:hover {
+	color: var(--primary-color-900);
+	transform: scale(1.05);
+	/* background-color: var(--secondary-color-900); */
+}
+/* list card */
+.birth-list {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.single-person {
+	width: 100%;
+	height: auto;
+	list-style: none;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+	gap: 2rem;
+	padding: 0.75rem 1rem;
+	box-shadow: var(--box-shadow-500);
+	border-radius: 0.35rem;
+}
+.person-img {
+	overflow: hidden;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ddd;
+	border: 1px solid #777;
+}
+.person-img img {
+	width: auto;
+	height: 100%;
+}
+.person-name {
+	font-weight: bold;
+}

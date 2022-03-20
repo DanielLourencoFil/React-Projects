@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+/* VARIABLES */
+:root {
+	--primary-color-100: #fff;
+	--primary-color-400: #555;
+	--primary-color-500: #f0f0f0;
+	--primary-color-600: #4a9fff;
+	--primary-color-700: #08213d;
+	--primary-color-800: #d1e6ff;
+	--primary-color-900: #6f00ff;
+	--secondary-color-900: rgba(255, 0, 0, 0.635);
+	--box-shadow-500: 0 0 20px 1px #a5a5a5;
+	--secondary-font-family: "Secular One", sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+body {
+	background-color: var(--primary-color-500);
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.main-container {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 	REVIEW  */
+.review-container {
+	width: 80vw;
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 2rem 1rem;
+	margin-top: 3rem;
+	box-shadow: var(--box-shadow-500);
+	border-radius: 10px;
+	background-color: var(--primary-color-100);
+}
+.review-card-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.img-container {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	/* overflow: hidden; */
+}
+
+.img-container::before {
+	content: '"';
+	position: absolute;
+	display: grid;
+	place-items: center;
+	font-family: var(--secondary-font-family);
+	font-size: 3rem;
+	line-height: 1.5;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	color: var(--primary-color-100);
+	background-color: var(--primary-color-600);
+	z-index: 2;
+}
+.img-container::after {
+	content: "";
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color: var(--primary-color-600);
+	right: -5px;
+	top: -5px;
+	z-index: 0;
+}
+.review-img {
+	position: relative;
+	border-radius: 50%;
+	object-fit: cover;
+	height: 100%;
+	z-index: 1;
+}
+.review-name {
+	font-size: 1.35rem;
+	font-weight: normal;
+	text-transform: capitalize;
+	color: var(--primary-color-700);
+}
+.review-job {
+	font-size: 1.05rem;
+	font-weight: normal;
+	text-transform: capitalize;
+	color: var(--primary-color-600);
+}
+.review-text {
+	font-size: 0.95rem;
+	width: 90%;
+	font-weight: normal;
+	text-transform: capitalize;
+	text-align: justify;
+	line-height: 1.3;
+	letter-spacing: 0.5px;
+	margin-top: 1rem;
+	color: var(--primary-color-400);
+}
+
+.review-btn {
+	font-size: 1.35rem;
+	color: var(--primary-color-600);
+	margin: 0 1rem;
+	cursor: pointer;
+	will-change: contents;
+	transition: all 0.3s;
+}
+.review-btn:hover {
+	color: var(--primary-color-700);
+	transform: scale(1.05);
+}
+.review-btn-random {
+	border: transparent;
+	padding: 0.35rem 1rem;
+	border-radius: 3px;
+	letter-spacing: 1px;
+	color: var(--primary-color-600);
+	background-color: var(--primary-color-800);
+	cursor: pointer;
+	will-change: contents;
+	transition: all 0.3s;
+}
+.review-btn-random:hover {
+	transform: scale(1.05);
+	background-color: var(--primary-color-700);
+}

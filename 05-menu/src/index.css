@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+/* VARIABLES */
+:root {
+	--light-color-100: rgb(75, 66, 66);
+	--light-color-200: #eeeeee;
+	--primary-color-400: #555;
+	--primary-color-500: #c59d5f;
+	--primary-color-600: #8995a3;
+	--primary-color-700: #08213d;
+	--primary-color-900: #6f00ff;
+	--secondary-color-900: rgba(255, 0, 0, 0.635);
+	--box-shadow-500: 0 0 20px 1px #a5a5a5;
+	--secondary-font-family: "Secular One", sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+body {
+	background-color: var(--light-color-200);
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.main-container {
+	display: flex;
+	min-height: 100vh;
+	width: 100vw;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+/* 	MENU  */
+.menu {
+	width: 80vw;
+	display: grid;
+	gap: 1rem;
+}
+.menu-btns-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+}
+.menu-btn {
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	border: none;
+	border-radius: 5px;
+	color: var(--primary-color-500);
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.menu-btn:hover {
+	background-color: var(--primary-color-500);
+	color: var(--light-color-200);
+}
+/* MENU SINGLE ITEM */
+.item-container {
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+.item-img {
+	border: 5px solid var(--primary-color-500);
+	border-radius: 5px;
+	height: 200px;
+	object-fit: cover;
+}
+.item-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 0;
+	padding-top: 0.85rem;
+	border-bottom: 1px dotted var(--primary-color-700);
+	font-size: 0.75rem;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+	color: var(--primary-color-700);
+}
+.item-price {
+	color: var(--primary-color-500);
+	font-weight: bold;
+	font-size: 1rem;
+}
+.item-desc {
+	padding: 1rem 0;
+	font-size: 0.85rem;
+	line-height: 1.75;
+	color: var(--primary-color-600);
+}
+@media (min-width: 700px) {
+	.item-container {
+		flex-direction: row;
+		gap: 2rem;
+	}
+	.item-img {
+		width: 50%;
+		min-width: 50%;
+	}
+}
+@media (min-width: 1000px) {
+	.menu {
+		width: 85%;
+		max-width: 1300px;
+	}
+	.menu-items {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+	}
+}
