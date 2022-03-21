@@ -66,8 +66,6 @@ body {
 /* TOUR MAIN */
 .tours-container {
 	width: 100vw;
-	width: 100vw;
-	min-height: 100vh;
 	display: grid;
 	justify-items: center;
 	gap: 2rem;
@@ -103,7 +101,6 @@ body {
 }
 .tour-card-container {
 	width: 70vw;
-	/* height: 300px; */
 	max-width: 600px;
 	padding-bottom: 1.5rem;
 	display: flex;
@@ -111,13 +108,11 @@ body {
 	justify-content: center;
 	align-items: center;
 	gap: 2rem;
-	/* padding: 2rem; */
 	box-shadow: 1px 1px 10px -1px var(--primary-color-400);
 }
 .tour-img {
 	width: 100%;
 	object-fit: cover;
-	/* object-position: center; */
 	height: 300px;
 }
 .tour-header {

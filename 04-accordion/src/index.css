@@ -32,16 +32,18 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
 }
 .main-container {
 	display: grid;
 	min-height: 70vh;
 	width: 80vw;
+	max-width: 900px;
 	grid-template-columns: 1fr;
-	margin: auto;
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-	justify-items: center;
+	place-content: center;
 	background-color: var(--primary-color-100);
 	box-shadow: var(--box-shadow-500);
 	border-radius: 5px;
