@@ -8,7 +8,6 @@ const MainTitle = ({ title }) => {
 		fontWeight: "600",
 		letterSpacing: "2px",
 		color: "#08213d",
-		marginTop: "3rem",
 	};
 	const underlineStyles = {
 		width: "90px",
@@ -16,6 +15,7 @@ const MainTitle = ({ title }) => {
 		bordeRadius: "0.5rem",
 		margin: "0 auto",
 		marginTop: ".5rem",
+		marginBottom: "3rem",
 		backgroundColor: "#4a9fff",
 		borderRadius: "5px",
 	};

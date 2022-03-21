@@ -4,7 +4,7 @@ import dataProjects from "./dataProjects";
 
 function App() {
 	return (
-		<section id="projects" className="projects-container section-center">
+		<section id="projects" className="projects-container">
 			<MainTitle title={"Basic Projects"} />
 			<div className="project-cards-container">
 				{dataProjects.map((item) => {

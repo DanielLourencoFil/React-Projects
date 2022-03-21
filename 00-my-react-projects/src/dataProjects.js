@@ -1,5 +1,10 @@
 const dataProjects = [
 	{
+		img: "../images/01-reminder.png",
+		title: "Birthday Reminder",
+		url: "https://birthday-reminder-react-project-01.netlify.app/",
+	},
+	{
 		img: "../images/03-reviews.png",
 		title: "Reviews",
 		url: "https://reviews-react-project-03.netlify.app/",
