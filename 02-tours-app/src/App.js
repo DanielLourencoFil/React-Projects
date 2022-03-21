@@ -39,7 +39,7 @@ function App() {
 	}
 	if (tours.length == 0) {
 		return (
-			<main className="tours-container">
+			<main className="no-tours-container">
 				<h1 className="main-title">No tours left</h1>
 				<button className="tour-btn" onClick={fechtTours}>
 					Refresh
@@ -50,6 +50,7 @@ function App() {
 
 	return (
 		<main>
+			<h1 className="main-title">Our Tours</h1>
 			<ToursDisplayer tours={tours} isError={isError} removeTour={removeTour} />
 			;
 		</main>
