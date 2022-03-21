@@ -104,13 +104,11 @@ body {
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	background-color: #ddd;
 	border: 1px solid #777;
 }
 .person-img img {
-	width: auto;
-	height: 100%;
+	object-fit: cover;
 }
 .person-name {
 	font-weight: bold;

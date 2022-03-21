@@ -1,0 +1,5 @@
+[build]
+  command = "npm run build"
+  publish="React-Projects/00-my-react-projects/"
+  base = "React-Projects"
+"
