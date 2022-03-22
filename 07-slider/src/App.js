@@ -22,17 +22,17 @@ function App() {
 		}
 	};
 
-	useEffect(() => {
-		const interval = setInterval(() => {
-			if (position + 1 > data.length - 1) {
-				setPosition(0);
-			} else {
-				setPosition(position + 1);
-			}
-		}, 5000);
+	// useEffect(() => {
+	// 	const interval = setInterval(() => {
+	// 		if (position + 1 > data.length - 1) {
+	// 			setPosition(0);
+	// 		} else {
+	// 			setPosition(position + 1);
+	// 		}
+	// 	}, 5000);
 
-		return () => clearInterval(interval);
-	}, [position]);
+	// 	return () => clearInterval(interval);
+	// }, [position]);
 
 	return (
 		<section className="main-container">
