@@ -3,13 +3,9 @@ import { ImQuotesRight } from "react-icons/im";
 
 const Slider = ({ image, name, title, quote, position, length, index }) => {
 	let move = "next";
-	let currentIndex = position + index - length;
-	currentIndex = currentIndex < 0 ? length + currentIndex : currentIndex;
-	if (currentIndex === 0) move = "active";
-	if (currentIndex === length - 1) move = "last";
-
-	console.log(currentIndex, index);
-
+	if (index === position) move = "active";
+	if ((position === 0 && index === length - 1) || index === position - 1)
+		move = "last";
 	return (
 		<div className={`slider ${move}`}>
 			<div className="review-img-container">
