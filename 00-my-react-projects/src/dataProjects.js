@@ -34,6 +34,11 @@ const dataProjects = [
 		title: "Slider",
 		url: "https://slider-react-project-07.netlify.app/",
 	},
+	{
+		img: "../images/08-ipsum-lorem.png",
+		title: "Ipsum Lorem Generator",
+		url: "https://ipsum-lorem-react-project-08.netlify.app/",
+	},
 ];
 
 export default dataProjects;
