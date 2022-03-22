@@ -29,6 +29,11 @@ const dataProjects = [
 		title: "Menu Tabs",
 		url: "https://menu-tabs-react-project-06.netlify.app/",
 	},
+	{
+		img: "../images/07-slider.png",
+		title: "Slider",
+		url: "https://slider-react-project-07.netlify.app/",
+	},
 ];
 
 export default dataProjects;
