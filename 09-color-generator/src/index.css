@@ -34,15 +34,16 @@ body {
 }
 
 .form-container {
+	width: 90vw;
+	max-width: 1200px;
 	text-align: center;
 	margin: 0 auto;
-	margin-top: 2rem;
+	margin-top: 3rem;
 	margin-bottom: 3rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 1rem;
 }
 
 .label-generator {
@@ -59,6 +60,7 @@ body {
 	font-weight: 700;
 	color: var(--primary-color-700);
 	letter-spacing: 1px;
+	text-align: left;
 }
 .label-generator input {
 	width: 15rem;
@@ -75,7 +77,6 @@ body {
 	text-transform: uppercase;
 	width: 15rem;
 	height: 3rem;
-	padding: 0 1rem;
 	letter-spacing: 1px;
 	color: var(--primary-color-100);
 	background-color: var(--primary-color-600);
@@ -100,7 +101,6 @@ body {
 @media (min-width: 600px) {
 	.form-container {
 		width: 90%;
-		height: 3rem;
 		flex-direction: row;
 		gap: 2rem;
 	}
@@ -130,18 +130,17 @@ body {
 	}
 }
 /* COLOR DISPLAYER */
+
 .color-displayer {
-	width: 90vw;
+	width: 91vw;
 	max-width: 1200px;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 	align-items: center;
 	margin: 0 auto;
+	margin-top: 5rem;
 }
 .single-color {
-	width: 20%;
-	min-width: 200px;
-	flex: 1 0 auto;
 	height: 200px;
 	display: flex;
 	flex-direction: column;
@@ -150,6 +149,17 @@ body {
 	gap: 0.5rem;
 	cursor: pointer;
 }
+
 .single-color:last-child {
 	flex: 0 0 auto;
+}
+.copy-message {
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+.copy-message-alert {
+	opacity: 1;
 }

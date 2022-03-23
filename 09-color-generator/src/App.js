@@ -5,6 +5,7 @@ function App() {
 	const colorDefault = new Values("#F15025").all(10);
 	const [color, setColor] = useState("");
 	const [error, setError] = useState(false);
+	const [copy, setCopy] = useState(-1);
 	const [colorValues, setColorValues] = useState(colorDefault);
 
 	const generateColor = (e) => {
@@ -22,10 +23,15 @@ function App() {
 		setError(false);
 		setColor("");
 	};
-	const copyClipBoard = (e) => {
+	const copyClipBoard = (e, index) => {
+		setCopy(index);
 		const copyColor = e.currentTarget.children[1].textContent;
 		navigator.clipboard.writeText(copyColor);
+		setTimeout(() => {
+			setCopy(-1);
+		}, 2000);
 	};
+
 	return (
 		<>
 			<div className="main-container">
@@ -56,7 +62,7 @@ function App() {
 				{colorValues.map((color, index) => {
 					return (
 						<div
-							onClick={(e) => copyClipBoard(e)}
+							onClick={(e) => copyClipBoard(e, index)}
 							key={index}
 							className="single-color"
 							style={{
@@ -67,6 +73,13 @@ function App() {
 						>
 							<p>{color.weight + "%"}</p>
 							<p>{"#" + color.hex}</p>
+							<p
+								className={`copy-message ${
+									copy === index ? "copy-message-alert" : ""
+								}`}
+							>
+								Copied to Clipboard
+							</p>
 						</div>
 					);
 				})}
