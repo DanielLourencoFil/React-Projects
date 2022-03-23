@@ -39,6 +39,11 @@ const dataProjects = [
 		title: "Lorem Ipsum Generator",
 		url: "https://ipsum-lorem-react-project-08.netlify.app/",
 	},
+	{
+		img: "../images/09-color-generator.png",
+		title: "Color Generator",
+		url: "https://color-generator-react-project-09.netlify.app/",
+	},
 ];
 
 export default dataProjects;
