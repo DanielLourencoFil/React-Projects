@@ -1,0 +1,180 @@
+/* VARIABLES */
+:root {
+	--primary-color-100: #fff;
+	--primary-color-400: #777;
+	--primary-color-500: #f1f1f1;
+	--primary-color-600: #5353ff;
+	--primary-color-700: #a53c00;
+	--primary-color-800: #ffc266;
+	--primary-color-900: #fffaf4;
+	--alert-color: rgb(255, 0, 0);
+	--alert-color-bg: rgba(255, 0, 0, 0.2);
+	--sucess-color: rgb(0, 182, 24);
+	--sucess-color-bg: rgba(0, 182, 24, 0.2);
+	--box-shadow-500: 1px 1px 10px -2px #868686;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--primary-color-900);
+}
+/* GROCERY BUD MAIN APP */
+.main-container {
+	width: 90vw;
+	max-width: 500px;
+	min-width: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	background-color: var(--primary-color-100);
+	box-shadow: var(--box-shadow-500);
+	border-radius: 5px;
+	margin: 0 auto;
+	margin-top: 5rem;
+	padding: 1.5rem;
+	text-align: center;
+}
+.main-title {
+	font-size: 2rem;
+	color: var(--primary-color-400);
+}
+
+/* INPUT ITEMS */
+.input-container {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+/* input messages */
+.input-message {
+	width: 100%;
+	height: 1.5rem;
+	font-size: 1rem;
+	opacity: 0;
+	transition: all 0.5s;
+	margin-bottom: 0.35rem;
+}
+.show-add-msg {
+	opacity: 1;
+	color: var(--sucess-color);
+	background-color: var(--sucess-color-bg);
+}
+.show-remove-msg {
+	opacity: 1;
+	color: var(--alert-color);
+	background-color: var(--alert-color-bg);
+}
+.input-btn-container {
+	width: 100%;
+	height: 2rem;
+}
+.input-items {
+	width: 80%;
+	height: 100%;
+	border: 2px solid transparent;
+	padding: 0 1rem;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	background-color: var(--primary-color-500);
+	color: var(--primary-color-400);
+	letter-spacing: 1px;
+	font-size: 1rem;
+}
+.input-items:focus {
+	outline-color: var(--primary-color-800);
+	background-color: transparent;
+}
+.input-btn {
+	width: 20%;
+	height: 100%;
+	border: 2px solid transparent;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: var(--primary-color-800);
+	letter-spacing: 1px;
+	font-size: 1rem;
+	color: var(--primary-color-700);
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.input-btn:hover {
+	background-color: var(--primary-color-700);
+	color: var(--primary-color-800);
+}
+/* ITEM */
+.list-items-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.item-container {
+	padding: 0.5rem 1rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 5px;
+	font-size: 1rem;
+	color: var(--primary-color-400);
+	transition: background-color 0.3s;
+}
+.item-container:hover {
+	background-color: var(--primary-color-500);
+}
+.edit-btn {
+	font-size: 0.875rem;
+	margin-left: 0.5rem;
+	cursor: pointer;
+	will-change: contents;
+	transition: all 0.3s;
+}
+.edit-icon {
+	color: var(--sucess-color);
+	opacity: 0.7;
+}
+.delete-icon {
+	color: var(--alert-color);
+	opacity: 0.7;
+}
+.edit-icon:hover,
+.delete-icon:hover {
+	opacity: 1;
+	transform: scale(1.1);
+}
+
+/* CLEAR BUTTON */
+.clear-btn {
+	margin-top: 1rem;
+	padding: 0.5rem 1.5rem;
+	border-radius: 5px;
+	border: transparent;
+	background-color: transparent;
+	color: var(--alert-color);
+	font-size: 1rem;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.clear-btn:hover {
+	background-color: var(--primary-color-500);
+}
