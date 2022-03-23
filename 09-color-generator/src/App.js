@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Values from "values.js";
 
 function App() {
@@ -27,11 +27,13 @@ function App() {
 		setCopy(index);
 		const copyColor = e.currentTarget.children[1].textContent;
 		navigator.clipboard.writeText(copyColor);
-		setTimeout(() => {
-			setCopy(-1);
-		}, 2000);
 	};
-
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+			setCopy(-1);
+		}, 3000);
+		return () => clearTimeout(timeout);
+	}, [copy]);
 	return (
 		<>
 			<div className="main-container">

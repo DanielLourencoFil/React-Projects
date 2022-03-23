@@ -44,6 +44,11 @@ const dataProjects = [
 		title: "Color Generator",
 		url: "https://color-generator-react-project-09.netlify.app/",
 	},
+	{
+		img: "../images/10-grocery-bud.png",
+		title: "Grocery Bud",
+		url: "https://grocery-bud-react-project-10.netlify.app/",
+	},
 ];
 
 export default dataProjects;
