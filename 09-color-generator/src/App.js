@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Values from "values.js";
 
 function App() {
@@ -62,7 +62,7 @@ function App() {
 							style={{
 								backgroundColor: `#${color.hex}`,
 								color:
-									color.type == "shade" || color.type == "base" ? "#fff" : "",
+									color.type === "shade" || color.type === "base" ? "#fff" : "",
 							}}
 						>
 							<p>{color.weight + "%"}</p>
