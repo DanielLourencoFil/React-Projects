@@ -132,6 +132,7 @@ body {
 
 @media (min-width: 800px) {
 	.navbar {
+		display: flex;
 		justify-content: center;
 		max-height: 5rem;
 	}
