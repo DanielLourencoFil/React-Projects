@@ -10,7 +10,7 @@
 
 * {
 	margin: 0;
-	padding: 0;
+	/* padding: 0; */
 	box-sizing: border-box;
 }
 li {
@@ -67,21 +67,23 @@ body {
 	width: 100vw;
 	margin: 0 auto;
 	margin-top: 2rem;
+	padding: 0;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
 	transition: all 0.5s;
 }
-.nav-links-small .nav-links-item {
-	width: 100vw;
+.nav-links-small li {
+	/* width: 100vw; */
+	width: 100%;
 	padding-left: 5vw;
 	padding-right: auto;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 	transition: all 0.5s ease-in-out;
 }
-.nav-links-small .nav-links-item:hover {
+.nav-links-small li:hover {
 	background-color: var(--primary-color-500);
 	padding-left: 7vw;
 }
