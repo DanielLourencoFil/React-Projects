@@ -9,10 +9,11 @@ const InputItems = () => {
 	const [edit, setEdit] = useState(false);
 	const [itemEditId, setItemEditId] = useState("");
 	const inputRef = useRef(null);
-
+	console.log(list == null);
 	// ============  LOCALSTORAGE UPDATE LIST AND DEFAULT RENDER
 	useEffect(() => {
 		const defaultList = JSON.parse(localStorage.getItem("groceryList"));
+		console.log(defaultList);
 		setList(defaultList);
 	}, []);
 	useEffect(() => {
@@ -113,18 +114,19 @@ const InputItems = () => {
 					</button>
 				</div>
 				<section className="list-items-container">
-					{list.map((item) => {
-						return (
-							<ItemComponent
-								key={item.id}
-								{...item}
-								editItem={editItem}
-								deleteItem={deleteItem}
-							/>
-						);
-					})}
+					{list.length > 1 &&
+						list.map((item) => {
+							return (
+								<ItemComponent
+									key={item.id}
+									{...item}
+									editItem={editItem}
+									deleteItem={deleteItem}
+								/>
+							);
+						})}
 				</section>
-				{list.length > 0 && (
+				{(list.length > 0 || list !== null) && (
 					<button className="clear-btn" onClick={clearList}>
 						Clear Items
 					</button>
