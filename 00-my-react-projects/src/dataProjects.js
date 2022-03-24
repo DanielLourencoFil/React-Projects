@@ -49,6 +49,11 @@ const dataProjects = [
 		title: "Grocery Bud",
 		url: "https://grocery-bud-react-project-10.netlify.app/",
 	},
+	{
+		img: "../images/11-responsive-navbar.png",
+		title: "Responsive Navbar",
+		url: "https://navbar01-react-project-11.netlify.app/",
+	},
 ];
 
 export default dataProjects;
