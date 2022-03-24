@@ -12,7 +12,7 @@ const AlertMessage = ({ message }) => {
 				(message === 5 && "show-remove-msg")
 			}`}
 		>
-			{(message == 0 && "") ||
+			{(message === 0 && "") ||
 				(message === 1 && "Item removed from the List") ||
 				(message === 2 && "The List is empty") ||
 				(message === 3 && "Item value updated") ||
