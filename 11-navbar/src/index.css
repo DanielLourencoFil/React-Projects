@@ -72,9 +72,8 @@ body {
 }
 .nav-links-small li {
 	width: 100vw;
+	padding: 0.5rem 0;
 	padding-left: 5vw;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
 	transition: all 0.5s ease-in-out;
 }
 .nav-links-small li:hover {
