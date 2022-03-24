@@ -4,7 +4,7 @@
 	--primary-color-400: #777;
 	--primary-color-500: #b4b4ff;
 	--primary-color-600: #5353ff;
-	--primary-color-900: #fffaf4;
+	--primary-color-900: #fdfdfd;
 	--box-shadow-500: 1px 1px 10px -2px #868686;
 }
 
@@ -27,7 +27,7 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: var(--primary-color-900);
+	background-color: var(--primary-color-100);
 }
 
 /************ NAVBAR ************/
@@ -41,6 +41,7 @@ body {
 	justify-content: flex-start;
 	box-shadow: var(--box-shadow-500);
 	transition: height 0.5s ease-in-out;
+	background-color: var(--primary-color-900);
 	overflow: hidden;
 }
 /* == nav links control display == */

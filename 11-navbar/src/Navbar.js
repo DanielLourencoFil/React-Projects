@@ -26,19 +26,19 @@ const Links = ({ css }) => {
 	return (
 		<ul className={css}>
 			<li>
-				<a href="#">Home</a>
+				<a href="home.html">Home</a>
 			</li>
 			<li>
-				<a href="#">About</a>
+				<a href="about.html">About</a>
 			</li>
 			<li>
-				<a href="#">Projects</a>
+				<a href="projects.html">Projects</a>
 			</li>
 			<li>
-				<a href="#">Profile</a>
+				<a href="profile.html">Profile</a>
 			</li>
 			<li>
-				<a href="#">Contact</a>
+				<a href="contact.html">Contact</a>
 			</li>
 		</ul>
 	);
