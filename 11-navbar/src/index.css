@@ -36,10 +36,6 @@ body {
 	width: 100vw;
 	height: 5rem;
 	display: block;
-	/* display: flex; */
-	/* flex-direction: column; */
-	/* align-items: center; */
-	/* justify-content: flex-start; */
 	box-shadow: var(--box-shadow-500);
 	transition: height 0.5s ease-in-out;
 	background-color: var(--primary-color-900);
@@ -75,10 +71,8 @@ body {
 	transition: all 0.5s;
 }
 .nav-links-small li {
-	/* width: 100vw; */
-	width: 100%;
+	width: 100vw;
 	padding-left: 5vw;
-	padding-right: auto;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 	transition: all 0.5s ease-in-out;
