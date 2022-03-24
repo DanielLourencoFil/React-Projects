@@ -64,14 +64,15 @@ body {
 .nav-links-small {
 	display: flex;
 	width: 100vw;
-	height: 100%;
 	margin: 0 auto;
 	margin-top: 2rem;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	cursor: pointer;
 	transition: all 0.5s;
 }
-.nav-links-item {
+.nav-links-small .nav-links-item {
 	width: 100vw;
 	padding-left: 5vw;
 	padding-right: auto;
@@ -79,7 +80,7 @@ body {
 	padding-bottom: 0.5rem;
 	transition: all 0.5s ease-in-out;
 }
-.nav-links-item:hover {
+.nav-links-small .nav-links-item:hover {
 	background-color: var(--primary-color-500);
 	padding-left: 7vw;
 }
