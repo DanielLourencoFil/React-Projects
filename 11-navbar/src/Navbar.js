@@ -25,19 +25,19 @@ function Navbar() {
 const Links = ({ css }) => {
 	return (
 		<ul className={css}>
-			<li>
+			<li className="nav-links-item">
 				<a href="home.html">Home</a>
 			</li>
-			<li>
+			<li className="nav-links-item">
 				<a href="about.html">About</a>
 			</li>
-			<li>
+			<li className="nav-links-item">
 				<a href="projects.html">Projects</a>
 			</li>
-			<li>
+			<li className="nav-links-item">
 				<a href="profile.html">Profile</a>
 			</li>
-			<li>
+			<li className="nav-links-item">
 				<a href="contact.html">Contact</a>
 			</li>
 		</ul>

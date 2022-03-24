@@ -71,7 +71,7 @@ body {
 	cursor: pointer;
 	transition: all 0.5s;
 }
-.nav-links-small li {
+.nav-links-item {
 	width: 100vw;
 	padding-left: 5vw;
 	padding-right: auto;
@@ -79,7 +79,7 @@ body {
 	padding-bottom: 0.5rem;
 	transition: all 0.5s ease-in-out;
 }
-.nav-links-small li:hover {
+.nav-links-item:hover {
 	background-color: var(--primary-color-500);
 	padding-left: 7vw;
 }
