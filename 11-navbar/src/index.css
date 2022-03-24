@@ -47,8 +47,6 @@ body {
 /* == nav links control display == */
 .show-nav {
 	height: 300px;
-	justify-content: space-between;
-	/* padding-bottom: 1rem; */
 }
 .navbar-center {
 	width: 90vw;
