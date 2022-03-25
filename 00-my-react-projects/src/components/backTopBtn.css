@@ -1,0 +1,40 @@
+/********* BACK TO TOP BTN *********/
+#back-to-top-btn {
+	position: fixed;
+	opacity: 0;
+	bottom: 5vh;
+	right: 2.5vw;
+	background: none;
+	border: none;
+	will-change: contents;
+	transition: all 0.5s;
+	z-index: -1;
+	cursor: pointer;
+}
+#back-to-top-btn:hover {
+	animation: bounce 0.5s ease-in-out infinite;
+}
+.arrow-up-icon {
+	font-size: 3.5rem;
+	color: var(--primary-color-600);
+	transition: all 0.5s;
+}
+.arrow-up-icon:hover {
+	color: var(--primary-color-700);
+	opacity: 1 !important;
+}
+.show-back-btn {
+	z-index: 50 !important;
+	opacity: 0.6 !important;
+}
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-50%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

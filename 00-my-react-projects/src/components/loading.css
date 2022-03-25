@@ -1,0 +1,27 @@
+/* LOADING */
+.loading-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	place-items: center;
+	background-color: var(--primary-color-500);
+	z-index: 1;
+}
+.loading-circle {
+	width: 7rem;
+	height: 3.5rem;
+	border-bottom: 10px dotted var(--primary-color-900);
+	animation: loading 1s linear infinite alternate-reverse;
+}
+
+@keyframes loading {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 7rem;
+	}
+}

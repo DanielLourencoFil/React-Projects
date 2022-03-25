@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import SectionProjects from "./components/SectionProjects";
 import Hero from "./components/Hero";
-import reportWebVitals from "./reportWebVitals";
 import Loading from "./components/Loading";
+import dataProjects from "./dataProjects";
+import Footer from "./components/Footer";
+import BackTopBtn from "./components/BackTopBtn";
 
 ReactDOM.render(
 	<React.StrictMode>
@@ -12,12 +14,9 @@ ReactDOM.render(
 			<Loading />;
 		})}
 		<Hero />
-		<App />
+		<SectionProjects title={"Basic Projects"} data={dataProjects} />
+		<Footer />
+		<BackTopBtn />
 	</React.StrictMode>,
 	document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
