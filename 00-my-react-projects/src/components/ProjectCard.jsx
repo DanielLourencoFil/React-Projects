@@ -1,14 +1,21 @@
 import React from "react";
-
+import { FaGithub } from "react-icons/fa";
 const ProjectCard = ({ data }) => {
-	const { img, title, url } = data;
+	const { img, title, url, urlGithub } = data;
 	return (
-		<a href={url} target="_blank" rel="noreferrer">
-			<article className="project-card">
+		<article className="project-card">
+			<a href={url} target="_blank" rel="noreferrer">
 				<img className="card-img" src={img} alt={title} />
+			</a>
+			<div className="card-footer">
 				<h2 className="card-title">{title}</h2>
-			</article>
-		</a>
+				<button className="card-icon">
+					<a href={urlGithub}>
+						<FaGithub />
+					</a>
+				</button>
+			</div>
+		</article>
 	);
 };
 
