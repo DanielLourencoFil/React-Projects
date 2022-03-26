@@ -10,7 +10,7 @@ const ProjectCard = ({ data }) => {
 			<div className="card-footer">
 				<h2 className="card-title">{title}</h2>
 				<button className="card-icon">
-					<a href={urlGithub}>
+					<a href={urlGithub} target="_blank" rel="noreferrer">
 						<FaGithub />
 					</a>
 				</button>
