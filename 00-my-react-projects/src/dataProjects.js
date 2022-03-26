@@ -1,4 +1,4 @@
-const dataProjects = [
+export const dataProjects = [
 	{
 		img: "../images/01-reminder.png",
 		title: "Birthday Reminder",
@@ -55,5 +55,15 @@ const dataProjects = [
 		url: "https://navbar01-react-project-11.netlify.app/",
 	},
 ];
-
-export default dataProjects;
+export const dataProjectsWebPages = [
+	{
+		img: "../images/webpage-project-01.png",
+		title: "React Projects Porfolio",
+		url: "https://react-projects-main.netlify.app/",
+	},
+	{
+		img: "../images/webpage-project-02.png",
+		title: "JavaScript Projects Porfolio",
+		url: "https://vanilla-land-js-projects.netlify.app/",
+	},
+];
