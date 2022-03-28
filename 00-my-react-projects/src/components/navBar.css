@@ -19,28 +19,6 @@
 	justify-content: space-between;
 	padding: 1.5rem 0;
 }
-.logo {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-.logo-symbol {
-	font-size: 2rem;
-	color: var(--primary-color-700);
-	line-height: 1;
-	margin-bottom: 5px;
-}
-.logo-text {
-	font-size: 1.25rem;
-	color: var(--primary-color-700);
-	letter-spacing: 1px;
-}
-.logo-text span {
-	color: var(--primary-color-600);
-	font-weight: 600;
-	text-shadow: 0 1px var(--primary-color-700);
-}
 
 .nav-footer {
 	display: flex;
@@ -95,13 +73,7 @@
 .nav-link:hover::before {
 	width: 50%;
 }
-.social-icons-container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 0.85rem;
-}
-.social-icon,
+
 .burguer-icon {
 	display: flex;
 	align-items: center;
@@ -111,10 +83,7 @@
 	will-change: contents;
 	transition: all 0.3s;
 }
-.social-icon:hover {
-	transform: scale(1.2);
-	color: var(--primary-color-700);
-}
+
 .burguer-icon {
 	display: flex;
 	transition: transform 0.5s;
@@ -147,8 +116,5 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-	}
-	.social-icons-container {
-		display: flex;
 	}
 }

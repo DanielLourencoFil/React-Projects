@@ -76,6 +76,13 @@ export const dataProjects = [
 		urlGithub:
 			"https://github.com/DanielLourencoFil/React-Projects/tree/main/11-navbar",
 	},
+	{
+		img: "../images/12-sidebar and modal.png",
+		title: "Sidebar and Modal",
+		url: "https://sidebar01-react-project-12.netlify.app/",
+		urlGithub:
+			"https://github.com/DanielLourencoFil/React-Projects/tree/main/12-sidebar-and-modal",
+	},
 ];
 export const dataProjectsWebPages = [
 	{
