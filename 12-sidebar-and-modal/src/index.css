@@ -1,0 +1,33 @@
+/* VARIABLES */
+:root {
+	--primary-color-100: #fff;
+	--primary-color-400: #777;
+	--primary-color-500: #b4b4ff;
+	--primary-color-600: #5353ff;
+	--primary-color-700: #222268;
+	--primary-color-900: #fdfdfd;
+	--alert-100: #8b0000;
+	--box-shadow-500: 1px 1px 10px -2px #868686;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a {
+	color: var(--primary-color-400);
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--primary-color-100);
+}

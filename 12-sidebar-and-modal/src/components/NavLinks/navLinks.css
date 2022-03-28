@@ -1,0 +1,48 @@
+.sidebar-modal {
+	position: absolute;
+	top: 0;
+	left: -100%;
+	height: 100vh;
+	width: 350px;
+	padding: 1rem 0;
+	display: grid;
+	grid-template-rows: 1fr 3fr 1fr;
+	transition: all 1s ease-in-out;
+	background-color: var(--primary-color-100);
+	box-shadow: var(--box-shadow-500);
+	z-index: 3;
+}
+.sidebar-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 0 1rem;
+}
+.close-btn {
+	color: var(--alert-100);
+	font-size: 1.75rem;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+.close-btn:hover {
+	transform: rotate(90deg);
+}
+.show-nav {
+	left: 0;
+}
+.navbar-links-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.nav-links-item {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem 1rem;
+	transition: all 0.3s;
+}
+.nav-links-item:hover {
+	padding-left: 2rem;
+	background-color: var(--primary-color-500);
+}

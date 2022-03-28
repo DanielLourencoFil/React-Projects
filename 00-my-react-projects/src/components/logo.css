@@ -1,0 +1,22 @@
+.logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.logo-symbol {
+	font-size: 2rem;
+	color: var(--primary-color-700);
+	line-height: 1;
+	margin-bottom: 5px;
+}
+.logo-text {
+	font-size: 1.25rem;
+	color: var(--primary-color-700);
+	letter-spacing: 1px;
+}
+.logo-text span {
+	color: var(--primary-color-600);
+	font-weight: 600;
+	text-shadow: 0 1px var(--primary-color-700);
+}

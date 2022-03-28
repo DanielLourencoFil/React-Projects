@@ -1,0 +1,17 @@
+.nav-icons-container {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 1rem 0;
+	gap: 1rem;
+}
+.nav-icon {
+	font-size: 1.5rem;
+	color: var(--primary-color-600);
+	will-change: contents;
+	transition: all 0.5s;
+}
+.nav-icon:hover {
+	color: var(--primary-color-700);
+	transform: scale(1.2);
+}
