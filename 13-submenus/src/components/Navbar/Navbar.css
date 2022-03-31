@@ -1,0 +1,64 @@
+/************ NAVBAR ************/
+
+.navbar {
+	position: absolute;
+	display: grid;
+	place-items: center;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 5rem;
+	/* z-index: 3; */
+}
+
+.navbar-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* == burguer menu icon == */
+
+.burguer-icon {
+	font-size: 1.5rem;
+	padding: 0;
+}
+.burguer-btn {
+	padding: 0.5rem;
+}
+
+.show-btn {
+	display: none;
+}
+@media (min-width: 750px) {
+	.navbar {
+		display: flex;
+		justify-content: center;
+		max-height: 5rem;
+	}
+	.navbar-center {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.nav-links-small {
+		display: none;
+	}
+	.nav-links-large {
+		display: flex;
+	}
+	.nav-icons-container {
+		display: flex;
+	}
+	.burguer-menu-icon {
+		display: none;
+	}
+	.show-btn {
+		display: block;
+	}
+	.hide-btn {
+		display: none;
+	}
+}

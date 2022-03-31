@@ -1,0 +1,17 @@
+.dark-btn {
+	display: grid;
+	place-items: center;
+	padding: 0.5rem 0.875rem;
+	color: var(--primary-color-100);
+	background-color: var(--secondary-color-900);
+	border: transparent;
+	border-radius: 4px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	font-size: 1.1rem;
+	transition: background-color 0.3s;
+}
+
+.dark-btn:hover {
+	background-color: var(--secondary-color-400);
+}

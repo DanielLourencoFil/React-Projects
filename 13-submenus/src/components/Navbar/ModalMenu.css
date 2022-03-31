@@ -1,0 +1,66 @@
+.modal-menu-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	z-index: -3;
+	opacity: 0;
+	place-items: center;
+	transform: scale(0);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+	transition: all 0.5s;
+}
+.modal-menu-center {
+	width: 95%;
+	height: 95%;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+
+	background-color: var(--primary-color-100);
+}
+.close-btn {
+	align-self: flex-end;
+	font-size: 2rem;
+	border: transparent;
+	background-color: inherit;
+	cursor: pointer;
+	color: var(--alert-500);
+}
+.menu-links {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-bottom: 2rem;
+}
+.menu-links h4 {
+	font-size: 1.15rem;
+	color: var(--secondary-color-900);
+}
+.submenu-links {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.submenu-links p {
+	font-size: 1rem;
+	color: var(--secondary-color-900);
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+.show-modal {
+	opacity: 1;
+	z-index: 3;
+	transform: scale(1);
+}
+@media (min-width: 750px) {
+	.modal-menu-container {
+		display: none;
+	}
+}
