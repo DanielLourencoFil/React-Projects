@@ -6,7 +6,7 @@ const Hero = () => {
 	const { submenuOpen } = useGlobalContext();
 	return (
 		<div className="hero" onMouseOver={() => submenuOpen(false)}>
-			<div className="section-center">
+			<div className="section-center hero-center">
 				<div className="hero-bg"></div>
 				<div className="hero-left-side">
 					<h1 className="hero-title">Hero Title or small Description </h1>

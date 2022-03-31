@@ -1,7 +1,8 @@
 .hero {
 	width: 100vw;
 	height: 100vh;
-
+}
+.hero-center {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
