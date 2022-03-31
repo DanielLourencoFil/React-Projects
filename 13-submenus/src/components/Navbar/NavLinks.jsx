@@ -1,10 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
 import { dataSubmenu } from "../../data";
 import { useGlobalContext } from "../../context";
 import "./NavLinks.css";
 
 const NavLinks = () => {
-	const { isSubmenuOpen, submenuOpen, closeSubmenu } = useGlobalContext();
+	const { submenuOpen } = useGlobalContext();
 
 	const handleSubmenuOpen = (e) => {
 		const menuLinkText = e.target.textContent;

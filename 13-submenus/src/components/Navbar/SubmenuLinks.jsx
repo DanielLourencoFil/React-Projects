@@ -6,7 +6,7 @@ const SubmenuLinks = () => {
 	const { isSubmenuOpen, submenuData, submenuLinks } = useGlobalContext();
 	const submenuContainerRef = useRef("");
 	const { text, height, center } = submenuData;
-	const { menu, submenu } = submenuLinks;
+	const { submenu } = submenuLinks;
 	const [colNumber, setColNumber] = useState("1");
 
 	useEffect(() => {
@@ -15,7 +15,7 @@ const SubmenuLinks = () => {
 		submenuContainer.style.left = center + "px";
 		submenu.length === 2 && setColNumber("2");
 		submenu.length >= 3 && setColNumber("3");
-	}, [isSubmenuOpen, submenuData, submenuLinks]);
+	}, [isSubmenuOpen, ...submenuData, submenu]);
 	return (
 		<div
 			className={`submenu-container ${isSubmenuOpen ? "show-submenu" : ""}`}

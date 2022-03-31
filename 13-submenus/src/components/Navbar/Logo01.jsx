@@ -10,10 +10,7 @@ const Logo01 = () => {
 		lineHeight: "1",
 		margin: "0",
 	};
-	const logoSpan = {
-		color: "#5353ff",
-		textShadow: "none",
-	};
+
 	return <p style={logoCss}>@Company</p>;
 };
 

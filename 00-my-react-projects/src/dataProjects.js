@@ -83,6 +83,13 @@ export const dataProjects = [
 		urlGithub:
 			"https://github.com/DanielLourencoFil/React-Projects/tree/main/12-sidebar-and-modal",
 	},
+	{
+		img: "../images/13-modal-hover-submenu.png",
+		title: "Modal and Hover SUbmenu",
+		url: "https://modal-hover-react-project-13.netlify.app/",
+		urlGithub:
+			"https://github.com/DanielLourencoFil/React-Projects/tree/main/13-submenus",
+	},
 ];
 export const dataProjectsWebPages = [
 	{

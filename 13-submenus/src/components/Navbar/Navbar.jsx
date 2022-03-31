@@ -1,6 +1,5 @@
 import Logo01 from "./Logo01";
 import { FaBars } from "react-icons/fa";
-import { useState, useRef, useEffect } from "react";
 import NavLinks from "./NavLinks";
 import DarkBtn from "../buttons/DarkBtn";
 import "./Navbar.css";
