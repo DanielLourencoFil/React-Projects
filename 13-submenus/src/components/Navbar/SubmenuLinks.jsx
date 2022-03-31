@@ -15,7 +15,7 @@ const SubmenuLinks = () => {
 		submenuContainer.style.left = center + "px";
 		submenu.length === 2 && setColNumber("2");
 		submenu.length >= 3 && setColNumber("3");
-	}, [isSubmenuOpen, ...submenuData, submenu]);
+	}, [isSubmenuOpen, height, center, submenu]);
 	return (
 		<div
 			className={`submenu-container ${isSubmenuOpen ? "show-submenu" : ""}`}
