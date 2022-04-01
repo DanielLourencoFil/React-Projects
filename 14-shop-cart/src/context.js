@@ -8,23 +8,10 @@ const url = "https://course-api.com/react-useReducer-cart-project";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-	// const [cartItems, setCartItems] = use
 	const [totalCartItems, setTotalCartItems] = useState(0);
 	const [totalCartValue, setTotalCartValue] = useState(0);
 	const [isLoading, setIsLoading] = useState(true);
 	const [cart, dispatch] = useReducer(reducer, []);
-
-	useEffect(() => {
-		let totalItems = 0;
-		let totalValue = 0;
-		cart.map((item) => {
-			totalItems = totalItems + item.amount;
-			totalValue = totalValue + item.price * item.amount;
-		});
-		totalValue = totalValue.toFixed(2);
-		setTotalCartItems(totalItems);
-		setTotalCartValue(totalValue);
-	}, [cart]);
 
 	const fetchDataCart = async () => {
 		const response = await fetch(url);
@@ -36,6 +23,16 @@ const AppProvider = ({ children }) => {
 	useEffect(() => {
 		fetchDataCart();
 	}, []);
+
+	useEffect(() => {
+		dispatch(
+			{
+				type: "TOTALS",
+				payload: { setTotalCartItems, setTotalCartValue },
+			},
+			[cart]
+		);
+	});
 
 	const addItems = (id) => {
 		dispatch({ type: "ADD_ITEMS", payload: id });
