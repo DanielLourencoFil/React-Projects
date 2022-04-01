@@ -85,10 +85,17 @@ export const dataProjects = [
 	},
 	{
 		img: "../images/13-modal-hover-submenu.png",
-		title: "Modal and Hover SUbmenu",
+		title: "Modal and Hover Submenu",
 		url: "https://modal-hover-react-project-13.netlify.app/",
 		urlGithub:
 			"https://github.com/DanielLourencoFil/React-Projects/tree/main/13-submenus",
+	},
+	{
+		img: "../images/14-shop-cart.png",
+		title: "Shop cart",
+		url: "https://shop-cart-react-project-14.netlify.app/",
+		urlGithub:
+			"https://github.com/DanielLourencoFil/React-Projects/tree/main/14-shop-cart",
 	},
 ];
 export const dataProjectsWebPages = [
