@@ -5,22 +5,21 @@ const reducer = (state, action) => {
 	if (action.type === "ADD_ITEMS") {
 		const cartUp = state.map((item) => {
 			if (item.id === action.payload) {
-				item.amount++;
+				const { amount } = item;
+				return { ...item, amount: item.amount + 1 };
 			}
 			return item;
 		});
-		console.log(cartUp);
 		return cartUp;
 	}
 	if (action.type === "REMOVE_ITEMS") {
 		const cartUpdate = state.map((item) => {
 			if (item.id === action.payload) {
-				item.amount--;
+				return { ...item, amount: item.amount - 1 };
 			}
 			return item;
 		});
 		const cardFilter = cartUpdate.filter((item) => {
-			console.log(item.amount);
 			return item.amount > 0;
 		});
 		return cardFilter;
