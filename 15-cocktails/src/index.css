@@ -25,7 +25,7 @@ a {
 	text-decoration: none;
 }
 a:visited {
-	color: initial;
+	color: var(--primary-dark-color-200);
 }
 img {
 	max-width: 100%;
