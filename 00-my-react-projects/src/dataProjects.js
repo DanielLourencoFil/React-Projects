@@ -102,7 +102,7 @@ export const dataProjects = [
 		title: "Cocktails DB",
 		url: "https://cocktails-db-react-project-15.netlify.app/",
 		urlGithub:
-			"https://github.com/DanielLourencoFil/React-Projects/tree/main/15-cocktailsDB",
+			"https://github.com/DanielLourencoFil/React-Projects/tree/main/15-cocktails",
 	},
 ];
 export const dataProjectsWebPages = [
