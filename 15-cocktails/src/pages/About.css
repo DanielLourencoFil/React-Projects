@@ -1,0 +1,15 @@
+.about-section {
+	width: 80vw;
+	margin: 5rem auto;
+	letter-spacing: 1px;
+}
+.about-section h1 {
+	text-align: center;
+	margin-bottom: 2rem;
+	text-transform: uppercase;
+}
+.about-section p {
+	text-align: justify;
+	text-indent: 2rem;
+	line-height: 1.5;
+}

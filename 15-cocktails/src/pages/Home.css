@@ -1,0 +1,26 @@
+.cocktails {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.cocktails-container {
+	width: 80%;
+	max-width: 1600px;
+	margin: 4rem auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	gap: 4rem;
+}
+@media (min-width: 800px) {
+	.cocktails-container {
+		width: 90%;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media (min-width: 1200px) {
+	.cocktails-container {
+		width: 90%;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}

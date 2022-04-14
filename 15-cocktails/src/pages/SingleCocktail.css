@@ -1,0 +1,55 @@
+.back-btn {
+	letter-spacing: 1px;
+	margin: 2rem auto;
+	background-color: var(--primary-color-500);
+	width: 10rem;
+	height: 2.5rem;
+	display: grid;
+	place-items: center;
+	line-height: 1;
+	border-radius: 5px;
+	color: var(--primary-light-200) !important;
+	text-transform: uppercase;
+	font-size: 0.875rem;
+	transition: opacity 0.3s;
+}
+.back-btn:hover {
+	opacity: 0.6;
+}
+.single-cocktail-main-title {
+	text-align: center;
+	font-size: 2rem;
+}
+.single-cocktail {
+	width: 70vw;
+	margin: 3rem auto;
+	margin-bottom: 5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.single-cocktail img {
+	height: auto;
+	object-fit: cover;
+}
+.single-cocktail-info {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+.single-cocktail-info-row span {
+	background-color: var(--primary-color-200);
+	border-radius: 3px;
+	padding: 0.2rem 0.5rem;
+	margin-right: 1rem;
+	color: var(--primary-dark-color-200);
+}
+
+@media (min-width: 800px) {
+	.single-cocktail {
+		flex-direction: row;
+	}
+}

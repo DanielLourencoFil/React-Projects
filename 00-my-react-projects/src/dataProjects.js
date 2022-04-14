@@ -97,6 +97,13 @@ export const dataProjects = [
 		urlGithub:
 			"https://github.com/DanielLourencoFil/React-Projects/tree/main/14-shop-cart",
 	},
+	{
+		img: "../images/15-cocktailsDB.png",
+		title: "Cocktails DB",
+		url: "https://cocktails-db-react-project-15.netlify.app/",
+		urlGithub:
+			"https://github.com/DanielLourencoFil/React-Projects/tree/main/15-cocktailsDB",
+	},
 ];
 export const dataProjectsWebPages = [
 	{
