@@ -39,13 +39,14 @@ const UsersList = () => {
 								<img className="user-img" src={avatar} alt={name} />
 								<p className="username-card">{name}</p>
 								<button className="user-link-btn">
-									<a href={url} target="_blank" rel="no-referrer">
+									<a href={url} target="_blank" rel="noreferrer">
 										View Profile
 									</a>
 								</button>
 							</article>
 						);
 					}
+					return;
 				})}
 			</div>
 			<div className="pagination">
@@ -69,6 +70,7 @@ const UsersList = () => {
 								</button>
 							);
 						}
+						return;
 					})}
 				</div>
 				<button className="move-page-btn" onClick={() => changePage("next")}>

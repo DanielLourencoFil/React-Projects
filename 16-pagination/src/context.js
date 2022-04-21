@@ -30,7 +30,7 @@ const ApiContext = ({ children }) => {
 
 	console.log(users);
 	return (
-		<GlobalContext.Provider value={{ loading, users, perPage }}>
+		<GlobalContext.Provider value={{ loading, users, perPage, setPerPage }}>
 			{children}
 		</GlobalContext.Provider>
 	);
