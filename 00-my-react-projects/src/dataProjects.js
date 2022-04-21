@@ -1,4 +1,4 @@
-export const dataProjects = [
+const dataProjectsOriginal = [
 	{
 		img: "../images/01-reminder.png",
 		title: "Birthday Reminder",
@@ -112,6 +112,9 @@ export const dataProjects = [
 			"https://github.com/DanielLourencoFil/React-Projects/tree/main/16-pagination",
 	},
 ];
+
+export const dataProjects = dataProjectsOriginal.reverse();
+
 export const dataProjectsWebPages = [
 	{
 		img: "../images/webpage-project-01.png",

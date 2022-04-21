@@ -56,10 +56,10 @@ const UsersList = () => {
 				</button>
 				<div className="pages-container">
 					{users.map((user, index) => {
-						console.log(users.length / perPage);
 						if (index + 1 <= users.length / perPage) {
 							return (
 								<button
+									key={index}
 									className={`${
 										index + 1 === pages / perPage
 											? "page-number-btn-active page-number-btn"

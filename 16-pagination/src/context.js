@@ -9,6 +9,13 @@ const ApiContext = ({ children }) => {
 	const [users, setUsers] = useState([]);
 	const [perPage, setPerPage] = useState(10);
 
+	// const pagination = (array, itemsPerPage) => {
+	// 	const pagesTotal = Math.ceil(array.length / itemsPerPage);
+	// 	return new Array(pagesTotal)
+	// 		.fill("")
+	// 		.map((_, index) => array.slice(index * pagesTotal, (index + 1) * 10));
+	// };
+
 	const fetchUsers = async () => {
 		try {
 			const response = await fetch(url);
@@ -28,7 +35,6 @@ const ApiContext = ({ children }) => {
 		fetchUsers();
 	}, []);
 
-	console.log(users);
 	return (
 		<GlobalContext.Provider value={{ loading, users, perPage, setPerPage }}>
 			{children}
