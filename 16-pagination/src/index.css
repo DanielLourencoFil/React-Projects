@@ -1,0 +1,35 @@
+:root {
+	--color-primary-200: #7cbbe9;
+	--color-primary-500: #49a6e9;
+	--color-primary-900: #124264;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(44, 44, 44);
+}
+a:active a:visited {
+	color: rgb(44, 44, 44);
+}
+button {
+	cursor: pointer;
+	border: transparent;
+	background-color: transparent;
+}

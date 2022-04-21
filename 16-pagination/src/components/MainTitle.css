@@ -1,0 +1,16 @@
+.main-title {
+	margin: 2rem auto;
+}
+.main-title h1 {
+	text-align: center;
+	font-size: 3rem;
+	color: #102a42;
+	margin-bottom: 0.5rem;
+}
+.underline {
+	width: 6rem;
+	height: 0.25rem;
+	background-color: #49a6e9;
+	margin: 0 auto;
+	border-radius: 1rem;
+}
