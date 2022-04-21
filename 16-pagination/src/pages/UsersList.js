@@ -45,8 +45,9 @@ const UsersList = () => {
 								</button>
 							</article>
 						);
+					} else {
+						return;
 					}
-					return;
 				})}
 			</div>
 			<div className="pagination">
@@ -69,8 +70,9 @@ const UsersList = () => {
 									{index + 1}
 								</button>
 							);
+						} else {
+							return;
 						}
-						return;
 					})}
 				</div>
 				<button className="move-page-btn" onClick={() => changePage("next")}>
