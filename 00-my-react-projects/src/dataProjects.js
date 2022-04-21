@@ -104,6 +104,13 @@ export const dataProjects = [
 		urlGithub:
 			"https://github.com/DanielLourencoFil/React-Projects/tree/main/15-cocktails",
 	},
+	{
+		img: "../images/16-pagination.png",
+		title: "Pagination GitUsers",
+		url: "https://pagination-gitusers-16.netlify.app/",
+		urlGithub:
+			"https://github.com/DanielLourencoFil/React-Projects/tree/main/16-pagination",
+	},
 ];
 export const dataProjectsWebPages = [
 	{
