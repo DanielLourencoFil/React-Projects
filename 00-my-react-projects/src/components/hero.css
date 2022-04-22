@@ -22,6 +22,15 @@
 .hero-img {
 	width: 300px;
 	display: none;
+	animation: spining-logo 30s linear infinite;
+}
+@keyframes spining-logo {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 .hero-title {
 	/* text-align: center; */
