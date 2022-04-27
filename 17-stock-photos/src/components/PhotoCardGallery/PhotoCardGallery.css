@@ -1,0 +1,17 @@
+.photo-card-container {
+	width: 90vw;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+}
+@media (min-width: 800px) {
+	.photo-card-container {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media (min-width: 1200px) {
+	.photo-card-container {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
