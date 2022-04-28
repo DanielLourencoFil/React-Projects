@@ -1,0 +1,19 @@
+{
+	"feedback": [
+		{
+			"id": 1,
+			"rate": 10,
+			"text": "data coming from json backend db 1"
+		},
+		{
+			"id": 2,
+			"rate": 8,
+			"text": "data coming from json backend db 2"
+		},
+		{
+			"id": 3,
+			"rate": 6,
+			"text": "data coming from json backend db 3"
+		}
+	]
+}

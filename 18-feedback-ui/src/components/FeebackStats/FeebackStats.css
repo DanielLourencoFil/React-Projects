@@ -1,0 +1,28 @@
+.feedback-stats {
+	width: 80vw;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	gap: 1rem;
+	justify-content: space-between;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	font-weight: 700;
+	color: var(--color-light-100);
+}
+.feedback-alert {
+	text-align: center;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	margin-top: 0;
+}
+@media (min-width: 650px) {
+	.feedback-stats {
+		width: 100%;
+
+		flex-direction: row;
+		align-items: center;
+		font-size: 1.2rem;
+	}
+}

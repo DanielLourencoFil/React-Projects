@@ -1,0 +1,29 @@
+.feedback-section {
+	position: relative;
+	width: 90vw;
+	max-width: 650px;
+	margin: 3rem auto;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.about-btn {
+	position: absolute;
+	top: -1rem;
+	right: 0;
+	font-size: 2rem;
+	transition: all 0.5s;
+}
+.about-btn:hover {
+	color: var(--color-primary-900);
+	transform: scale(1.2);
+}
+@media (min-width: 750px) {
+	.about-btn {
+		top: 7rem;
+		right: -3rem;
+	}
+}

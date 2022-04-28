@@ -1,0 +1,63 @@
+.feedback-card {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-light-100);
+	padding: 3rem 1rem;
+	border-radius: var(--radius-100);
+	transition: all 0.5s;
+}
+.feedback-card-edit-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.5rem 1rem;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	font-size: 1rem;
+	justify-content: center;
+}
+.feedback-edit-btn {
+	font-size: 1rem;
+	cursor: pointer;
+	will-change: contents;
+	transition: all 0.5s;
+}
+.feedback-edit-btn:hover {
+	transform: scale(1.2);
+}
+.edit-btn {
+	color: var(--color-sucess-500);
+}
+.remove-btn {
+	color: var(--color-alert-500);
+}
+
+.feedback-card-rate {
+	position: absolute;
+	top: -1rem;
+	left: -0.5rem;
+	display: grid;
+	place-items: center;
+	width: 3rem;
+	height: 3rem;
+	font-size: 1.2rem;
+	border-radius: 50%;
+	background-color: var(--color-primary-900);
+	color: var(--color-light-100);
+}
+.feedback-card-text {
+	width: 90%;
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+	word-wrap: break-word;
+}
+@media (min-width: 650px) {
+	.feedback-card-rate {
+		left: -1.5rem;
+	}
+}

@@ -1,0 +1,13 @@
+.navbar {
+	position: relative;
+	background-color: var(--color-primary-900);
+	padding: 2rem;
+}
+.navbar h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	color: var(--color-light-100);
+	font-size: 2rem;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+}

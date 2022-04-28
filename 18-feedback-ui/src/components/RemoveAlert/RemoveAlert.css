@@ -1,0 +1,36 @@
+.remove-modal {
+	position: absolute;
+	background-color: var(--color-light-100);
+	padding: 1.5rem 2rem;
+	border-radius: 0.5rem;
+	border: 1px solid var(--color-light-100);
+	box-shadow: 2px 2px 5px var(--color-primary-900);
+	top: -1rem;
+	right: -1rem;
+	/* right: -100vw; */
+	transform: scale(0);
+	z-index: 3;
+	transition: all 0.5s ease-in-out;
+}
+.remove-modal.active {
+	transition: all 0.5s ease-in-out;
+	/* right: -1rem; */
+	transform: scale(1);
+}
+.remove-modal h4 {
+	color: var(--color-primary-900) !important;
+	font-size: 1.25;
+}
+.remove-btns {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 1rem;
+	gap: 1rem;
+}
+.remove-modal .remove-btn {
+	background-color: var(--color-primary-100);
+	color: var(--color-primary-900);
+	border-radius: 0.3rem;
+	padding: 0.25rem 0.75rem;
+}

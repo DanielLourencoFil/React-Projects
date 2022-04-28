@@ -1,0 +1,28 @@
+.spining-loader {
+	position: relative;
+	width: 6rem;
+	height: 6rem;
+}
+.spining-loader-circle {
+	width: 6rem;
+	height: 6rem;
+	border: 5px dotted var(--color-light-100);
+	border-radius: 50%;
+	transition: all 0.5s;
+	animation: spining-loader 5s linear infinite;
+}
+.spining-loader-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--color-dark-900);
+}
+@keyframes spining-loader {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
