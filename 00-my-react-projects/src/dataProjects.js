@@ -111,6 +111,13 @@ const dataProjectsOriginal = [
 		urlGithub:
 			"https://github.com/DanielLourencoFil/React-Projects/tree/main/16-pagination",
 	},
+	{
+		img: "../images/18-feedback-ui.png",
+		title: "Feedback UI",
+		url: "https://feedback-ui-18.netlify.app/",
+		urlGithub:
+			"https://github.com/DanielLourencoFil/React-Projects/tree/main/18-feedback-ui",
+	},
 ];
 
 export const dataProjects = dataProjectsOriginal.reverse();
