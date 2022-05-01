@@ -4,33 +4,26 @@ import React from "react";
 
 const PhotoCard = ({ item }) => {
 	const {
-		alt_description: alt,
+		alt_description,
 		likes,
-		urls: { small: photo },
+		urls: { regular },
 		user: {
-			links: { html: authorLink },
-		},
-		user: { first_name: firstName },
-		user: { last_name: lastName },
-		user: {
-			profile_image: { small: authorImage },
+			name,
+			portfolio_url,
+			profile_image: { medium },
 		},
 	} = item;
-	console.log();
+
 	return (
 		<article className="photo-card">
-			<img className="img-photo-card" src={photo} alt={alt} />
+			<img className="img-photo-card" src={regular} alt={alt_description} />
 			<div className="photo-card-info-container">
 				<div className="photo-card-info">
-					<p className="photo-card-name">{`${firstName} ${lastName}`}</p>
+					<p className="photo-card-name">{name}</p>
 					<p className="photo-card-likes">{`${likes} likes`}</p>
 				</div>
-				<a href={authorLink}>
-					<img
-						className="author-img"
-						src={authorImage}
-						alt={`${firstName} ${lastName}`}
-					/>
+				<a href={portfolio_url}>
+					<img className="author-img" src={medium} alt={name} />
 				</a>
 			</div>
 		</article>
@@ -38,3 +31,17 @@ const PhotoCard = ({ item }) => {
 };
 
 export default PhotoCard;
+
+// const {
+// 	alt_description: alt,
+// 	likes,
+// 	urls: { small: small },
+// 	user: {
+// 		links: { html: authorLink },
+// 	},
+// 	user: { first_name: firstName },
+// 	user: { last_name: lastName },
+// 	user: {
+// 		profile_image: { small: authorImage },
+// 	},
+// } = item;

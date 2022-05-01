@@ -1,6 +1,8 @@
 .photo-card-container {
-	width: 90vw;
+	position: relative;
+	width: 100%;
 	margin: 0 auto;
+	/* margin-bottom: 15%; */
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 2rem;

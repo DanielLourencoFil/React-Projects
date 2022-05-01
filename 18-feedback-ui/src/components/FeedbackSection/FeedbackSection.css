@@ -17,6 +17,9 @@
 	font-size: 2rem;
 	transition: all 0.5s;
 }
+.about-btn:visited {
+	color: var(--color-primary-900);
+}
 .about-btn:hover {
 	color: var(--color-primary-900);
 	transform: scale(1.2);

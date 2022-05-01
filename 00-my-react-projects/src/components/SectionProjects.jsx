@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard";
 import MainTitle from "./MainTitle";
 import "./sectionProjects.css";
+import { useRef, useEffect, useState } from "react";
 
 function SectionProjects({ data, title, bgColor, display }) {
 	return (

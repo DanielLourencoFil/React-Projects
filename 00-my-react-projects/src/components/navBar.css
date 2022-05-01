@@ -2,12 +2,14 @@
 .nav-container {
 	position: absolute;
 	width: 100vw;
+	top: -10rem;
 	box-shadow: var(--box-shadow-500);
+	animation: updown 1s ease-in-out forwards;
 	transition: height 0.5s ease-in-out;
 }
 
 .nav-center {
-	width: 85%;
+	width: 80%;
 	max-width: 1200px;
 	margin: 0 auto;
 	display: flex;
@@ -116,5 +118,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+}
+@keyframes updown {
+	0% {
+		top: -10rem;
+	}
+	100% {
+		top: 0;
 	}
 }

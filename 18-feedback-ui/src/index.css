@@ -26,6 +26,9 @@ body {
 a {
 	text-decoration: none;
 }
+a:visited {
+	color: var(--color-primary-900);
+}
 button {
 	border: transparent;
 	background-color: transparent;

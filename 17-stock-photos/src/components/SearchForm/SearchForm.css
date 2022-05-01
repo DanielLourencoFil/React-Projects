@@ -1,6 +1,6 @@
 .search-form-container {
-	width: 90vw;
-	margin: 5rem auto;
+	width: 100%;
+	margin: 5rem auto 5rem 0;
 }
 .search-btn {
 	display: grid;
@@ -17,6 +17,7 @@
 .search-bar {
 	position: relative;
 	width: 100%;
+	max-width: 1000px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -24,6 +25,11 @@
 	overflow: hidden;
 }
 @media (min-width: 700px) {
+	.search-bar {
+		width: 75%;
+	}
+}
+@media (min-width: 1000px) {
 	.search-bar {
 		width: 60%;
 	}
