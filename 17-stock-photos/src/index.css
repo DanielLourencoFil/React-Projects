@@ -27,22 +27,15 @@ body {
 .app {
 	display: block;
 	width: 90vw;
-	max-width: 1400px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
-.infinite {
-	width: 100vw;
-	height: 100vh;
-	color: aquamarine;
-	border: 2px solid black;
-	font-size: 3rem;
-	color: #000;
-	display: grid;
-	place-items: center;
-}
+
 .loading {
 	position: absolute;
 	bottom: 10rem;
 	left: 50%;
 	transform: translateX(-50%);
 }
+
+/*  */

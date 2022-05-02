@@ -1,15 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { BiSearch } from "react-icons/bi";
 import "./SearchForm.css";
 
-const SearchForm = ({ search, setSearch, handleSubmit }) => {
-	// const [search, setSearch] = useState("");
+const SearchForm = ({ setPhotos, searchPhotos, setSearchPhotos, setQuery }) => {
 	const [isShowLine, setIsShowLine] = useState(false);
 	const searchLineActive = useRef(null);
+	const searchFormBtn = useRef(null);
 	const handleSearch = (e) => {
 		e.preventDefault();
 		const searchValue = e.target.value;
-		setSearch(searchValue);
+		setSearchPhotos(searchValue);
 	};
 
 	const showLine = (e) => {
@@ -19,9 +19,16 @@ const SearchForm = ({ search, setSearch, handleSubmit }) => {
 		} else {
 			searchLineActive.current.classList.add("show-search-line");
 		}
-		if (!e.target.classList.contains("search-btn")) {
-			setSearch("");
-		}
+		const emptyInput = setTimeout(() => {
+			setSearchPhotos("");
+		}, 200);
+		return () => clearTimeout(emptyInput);
+	};
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		setPhotos([]);
+		setQuery(searchPhotos);
+		setSearchPhotos("");
 	};
 	return (
 		<section className="search-form-container">
@@ -29,15 +36,20 @@ const SearchForm = ({ search, setSearch, handleSubmit }) => {
 				<div className="search-bar">
 					<div className="search-line" ref={searchLineActive}></div>
 					<input
-						onFocus={() => showLine()}
-						onBlur={() => showLine()}
+						onFocus={(e) => showLine(e)}
+						onBlur={(e) => showLine(e)}
 						className="search-input"
 						type="text"
-						value={search}
+						value={searchPhotos}
 						onChange={(e) => handleSearch(e)}
 						placeholder="Search"
 					/>
-					<button className="search-btn" onClick={handleSubmit}>
+					<button
+						type="submit"
+						className="search-btn"
+						onClick={handleSubmit}
+						ref={searchFormBtn}
+					>
 						<BiSearch />
 					</button>
 				</div>

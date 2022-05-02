@@ -112,6 +112,13 @@ const dataProjectsOriginal = [
 			"https://github.com/DanielLourencoFil/React-Projects/tree/main/16-pagination",
 	},
 	{
+		img: "../images/17-stock-photos.png",
+		title: "Stock Photos App",
+		url: "https://stock-photos-17.netlify.app/",
+		urlGithub:
+			"https://github.com/DanielLourencoFil/React-Projects/tree/main/17-stock-photos",
+	},
+	{
 		img: "../images/18-feedback-ui.png",
 		title: "Feedback UI",
 		url: "https://feedback-ui-18.netlify.app/",
