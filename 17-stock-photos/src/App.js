@@ -20,7 +20,7 @@ function App() {
 		const urlPage = `&page=${page}`;
 		const urlSearch = `&query=${query}`;
 		if (query) {
-			url = `${searchUrl}${clientID}${urlPage}${urlSearch}`;
+			url = `${searchUrl}${clientID}${urlPage}${urlSearch}`; // must futher setup in server to work
 		} else {
 			url = `${mainUrl}${clientID}${urlPage}`;
 		}
