@@ -56,7 +56,8 @@ function App() {
 				document.body.clientHeight,
 				document.documentElement.clientHeight
 			);
-			if (!isLoading && window.innerHeight + window.scrollY >= scrollHeight) {
+
+			if (isLoading && window.innerHeight + window.scrollY >= scrollHeight) {
 				setPage((old) => {
 					return old + 1;
 				});
@@ -64,6 +65,7 @@ function App() {
 			}
 			return () => window.removeEventListener("scroll", event);
 		});
+		// eslint-disable-next-line
 	}, []);
 	return (
 		<main className="app">
