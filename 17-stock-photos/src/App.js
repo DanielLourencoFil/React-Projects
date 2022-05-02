@@ -7,7 +7,7 @@ const mainUrl = `https://api.unsplash.com/photos/`;
 const searchUrl = `https://api.unsplash.com/search/photos/`;
 
 function App() {
-	const [isLoading, setIsLoading] = useState(false);
+	const [isLoading, setIsLoading] = useState(true);
 	const [photos, setPhotos] = useState([]);
 	const [searchPhotos, setSearchPhotos] = useState("");
 	const [query, setQuery] = useState("");
@@ -29,24 +29,21 @@ function App() {
 			const response = await fetch(url);
 			const data = await response.json();
 			if (query) {
-				setIsLoading(false);
-				console.log(photos);
-				console.log("search query");
 				setPhotos([...photos, ...data.results]);
 			} else {
-				console.log("deafault search");
 				setPhotos([...photos, ...data]);
-				setIsLoading(false);
 			}
 		} catch (error) {
 			setIsLoading(true);
-			console.log("Not working ", error);
+			console.log("Something is not working: ", error);
 		}
+		setIsLoading(false);
 	};
 
 	useEffect(() => {
 		setIsLoading(true);
 		fetchPhotos();
+		// eslint-disable-next-line
 	}, [page, query]);
 
 	useEffect(() => {
