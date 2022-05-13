@@ -125,6 +125,13 @@ export const dataProjects = dataProjectsOriginal.reverse();
 
 export const dataProjectsWebPages = [
 	{
+		img: "../images/20-github-users.png",
+		title: "Github Users Search App",
+		url: "https://https://github-search-app-20.netlify.app/",
+		urlGithub:
+			"https://github.com/DanielLourencoFil/React-Projects/tree/main/20-git-users-app",
+	},
+	{
 		img: "../images/webpage-project-01.png",
 		title: "React Projects Porfolio",
 		url: "https://react-projects-main.netlify.app/",
