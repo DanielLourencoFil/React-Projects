@@ -175,6 +175,7 @@ const GlobalContext = ({ children }) => {
 				alert,
 				requests,
 				pages,
+				query,
 				setAlert,
 				setPages,
 				setSearchInput,

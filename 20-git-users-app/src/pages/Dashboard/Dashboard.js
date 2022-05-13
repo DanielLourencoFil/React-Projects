@@ -11,7 +11,8 @@ import {
 } from "../../components";
 
 const Dashboard = () => {
-	const { loading, gitHubUser } = GlobalContextAPIHook();
+	const { loading, gitHubUser, query } = GlobalContextAPIHook();
+	console.log(query, !query);
 	return (
 		<main
 			className={`section-main flex column ${
@@ -22,7 +23,7 @@ const Dashboard = () => {
 			<Search />
 			{loading?.global ? (
 				<Loader />
-			) : gitHubUser?.length === 0 ? (
+			) : gitHubUser?.length === 0 && !query ? (
 				<div className="no-user-display-msg">
 					<h1>Please type a gituser to display user info!</h1>
 				</div>
