@@ -3,12 +3,10 @@ import { calcLanguage } from "./utils/calcLanguage";
 import { calcReposPopularity } from "./utils/calcReposPopularity";
 import axios from "axios";
 
-const rootUrl = "http://api.github.com";
-const rateLimit = "/rate_limit";
-
 const globalContextAPI = createContext("");
 
 const GlobalContext = ({ children }) => {
+	const rootUrl = "http://api.github.com";
 	//loading and alerts
 	const [loading, setLoading] = useState({ global: true, followers: true });
 	const [alert, setAlert] = useState({ status: 0, msg: "", disabled: false });
@@ -30,7 +28,7 @@ const GlobalContext = ({ children }) => {
 		try {
 			const {
 				data: { rate },
-			} = await axios.get(rootUrl + rateLimit);
+			} = await axios.get(`${rootUrl}/rate_limit`);
 			setRequests({ limit: rate.limit, remaining: rate.remaining });
 			if (requests.remaining > 0) {
 				setAlert({
@@ -82,16 +80,6 @@ const GlobalContext = ({ children }) => {
 			console.log(error);
 		}
 	};
-	// const fetchRepos = async () => {
-	// 	try {
-	// 		const { data } = await axios.get(
-	// 			`${rootUrl}/users/${query}/repos?per_page=100`
-	// 		);
-	// 		setRepos(data);
-	// 	} catch (error) {
-	// 		console.log(error);
-	// 	}
-	// };
 
 	//when app first loads check number of remaining search requests
 	useEffect(() => {

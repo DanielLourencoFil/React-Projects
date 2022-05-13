@@ -17,8 +17,6 @@ root.render(
 	<Auth0Provider
 		domain={process.env.REACT_APP_DOMAIN}
 		clientId={process.env.REACT_APP_CLIENT_ID}
-		// redirectUri={"http://localhost:3000/dashboard"}
-		// cacheLocation={"localStorage"}
 		redirectUri={window.location.origin}
 	>
 		<GlobalContext>
