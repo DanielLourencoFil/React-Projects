@@ -6,7 +6,7 @@ import axios from "axios";
 const globalContextAPI = createContext("");
 
 const GlobalContext = ({ children }) => {
-	const rootUrl = "http://api.github.com";
+	const rootUrl = "https://api.github.com";
 	//loading and alerts
 	const [loading, setLoading] = useState({ global: true, followers: true });
 	const [alert, setAlert] = useState({ status: 0, msg: "", disabled: false });
@@ -29,6 +29,7 @@ const GlobalContext = ({ children }) => {
 			const {
 				data: { rate },
 			} = await axios.get(`${rootUrl}/rate_limit`);
+			console.log(rate);
 			setRequests({ limit: rate.limit, remaining: rate.remaining });
 			if (requests.remaining > 0) {
 				setAlert({
@@ -130,6 +131,7 @@ const GlobalContext = ({ children }) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		console.log("submit btn");
 		setPages(1);
 		let timeout;
 		if (!searchInput) {

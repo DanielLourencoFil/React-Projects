@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Login, Dashboard, Error } from "./pages";
-import { Navigate } from "react-router-dom";
 import { GlobalContextAPIHook } from "./context/GlobalContext";
 import { Loader } from "./components";
 import { PrivateRoute } from "./components";
