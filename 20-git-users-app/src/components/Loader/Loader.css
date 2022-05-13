@@ -1,0 +1,31 @@
+.spinner {
+	position: relative;
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	border: 15px solid var(--color-primary-500);
+	border-top-color: transparent;
+	animation: spinning 2s linear infinite;
+}
+.spinner::after {
+	position: absolute;
+	top: -50%;
+	right: -10%;
+	transform: rotate(-45deg);
+	border-color: transparent;
+	content: "";
+	width: 30px;
+	height: 30px;
+	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	background-color: var(--color-primary-500);
+}
+
+@keyframes spinning {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}

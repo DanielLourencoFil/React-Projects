@@ -1,0 +1,13 @@
+.error-page {
+	height: 100vh;
+	background-color: var(--color-primary-100);
+}
+.error-page-info-container {
+	gap: 0.5rem;
+}
+.error-page .main-title {
+	font-size: 6rem;
+}
+.error-page .generic-btn {
+	margin-top: 2rem;
+}

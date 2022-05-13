@@ -1,0 +1,26 @@
+.charts-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 3rem;
+	/* margin-bottom: 3rem; */
+}
+.charts-container div {
+	width: 100% !important;
+}
+.charts-container .fusioncharts-container {
+	width: 100% !important;
+}
+.charts-container svg {
+	width: 100% !important;
+	border-radius: var(--radius-100);
+}
+@media (min-width: 800px) {
+	.charts-container {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media (min-width: 1100px) {
+	.charts-container {
+		grid-template-columns: 2fr 3fr;
+	}
+}

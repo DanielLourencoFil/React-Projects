@@ -1,0 +1,46 @@
+.nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.nav-user-info {
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+}
+.nav-user-img {
+	width: 50px;
+	border-radius: 50%;
+}
+.nav-user-name {
+	display: flex;
+	gap: 0.3rem;
+	flex-direction: column;
+	letter-spacing: var(--spacing-100);
+	font-size: 0.975rem;
+	font-weight: 200;
+	color: var(--color-primary-900);
+}
+.nav-user-name span {
+	line-height: 1.2;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.logout-btn {
+	padding: 0.5rem;
+	background-color: transparent;
+	color: var(--color-primary-500);
+}
+.logout-btn:hover {
+	background-color: var(--color-primary-500);
+	color: var(--color-light-100);
+}
+@media (min-width: 600px) {
+	.nav-user-name {
+		flex-direction: row;
+	}
+	.logout-btn {
+		padding: 0.5rem 1rem;
+	}
+}

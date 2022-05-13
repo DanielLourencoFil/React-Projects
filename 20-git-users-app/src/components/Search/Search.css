@@ -1,0 +1,112 @@
+.search-container {
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1rem;
+}
+.search-input-alert {
+	position: absolute;
+	font-size: 0.875rem;
+	top: 0;
+	left: 0;
+	transform: translateY(-100%);
+	height: 1.5rem;
+	color: var(--color-alert-500);
+	transition: var(--transition-200);
+}
+.searchbar {
+	position: relative;
+	max-width: 100%;
+	padding: 0.25rem;
+	gap: 0.5rem;
+}
+
+.search-input {
+	width: 100%;
+	height: 100%;
+	line-height: var(--line-heigth-500);
+	border: 1px solid transparent;
+	font-size: 1.15rem;
+	padding: 0.2rem 0.5rem;
+}
+.search-input:focus {
+	outline: 2px solid var(--color-primary-200);
+	border-radius: var(--radius-100);
+}
+.search-input::placeholder {
+	color: var(--color-grey-300);
+	letter-spacing: var(--spacing-100);
+	text-transform: capitalize;
+}
+/* btn for screen size > 400px */
+.search-btn {
+	font-size: 1.15rem;
+	padding: 0.5rem;
+	text-transform: capitalize;
+}
+.search-btn:hover {
+	background-color: var(--color-primary-200);
+	color: var(--color-primary-900);
+	border-color: var(--color-primary-200);
+}
+.search-btn:disabled {
+	opacity: 0.4;
+}
+
+.search-btn:disabled:hover {
+	cursor: not-allowed;
+	opacity: 0.4;
+	color: var(--color-light-100);
+	background-color: var(--color-primary-500);
+}
+/* btn for screen size < 400px */
+.search-btn-small {
+	display: grid;
+	place-items: center;
+	background-color: transparent;
+	border: none;
+	font-size: 1.875rem;
+	margin-right: 0.35rem;
+	color: var(--color-primary-500);
+	cursor: pointer;
+	transition: var(--transition-100);
+}
+.search-btn-small:hover {
+	transform: scale(1.1);
+}
+.search-btn-small:disabled {
+	opacity: 0.4;
+}
+
+.search-btn-small:disabled:hover {
+	cursor: not-allowed;
+	opacity: 0.4;
+	color: var(--color-light-100);
+	background-color: var(--color-primary-500);
+}
+.search-icon {
+	font-size: 1.75rem;
+	color: var(--color-primary-600);
+}
+.request-counter {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.25rem;
+	font-size: clamp(1.2rem, 3vw, 1.8rem);
+	letter-spacing: var(--spacing-200);
+	color: var(--color-primary-600);
+}
+@media (min-width: 700px) {
+	.search-container {
+		flex-direction: row;
+		align-items: center;
+	}
+	.searchbar {
+		max-width: 65%;
+		padding: 0.5rem;
+		gap: 0.5rem;
+	}
+	.search-input {
+		font-size: 1.35rem;
+	}
+}

@@ -1,0 +1,28 @@
+.followers-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	/* margin-bottom: 3rem; */
+}
+.follower {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.follower-img {
+	width: 50px;
+	border-radius: 50%;
+}
+.follower-name {
+	font-size: 0.9rem;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+}
+.follower-url {
+	font-size: 0.9rem;
+	color: var(--color-grey-400);
+}

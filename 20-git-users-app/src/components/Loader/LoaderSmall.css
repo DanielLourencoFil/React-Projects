@@ -1,0 +1,36 @@
+.spinner-small {
+	position: relative;
+	width: 25px;
+	height: 25px;
+	left: 50%;
+	border-radius: 50%;
+	border: 5px solid var(--color-primary-500);
+	border-top-color: transparent;
+	animation: spinning-small 2s linear infinite;
+}
+.spinner-small::after {
+	position: absolute;
+	top: -50%;
+	right: -10%;
+	transform: rotate(-45deg);
+	border-color: transparent;
+	content: "";
+	width: 10px;
+	height: 10px;
+	-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	background-color: var(--color-primary-500);
+}
+
+@keyframes spinning-small {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+/*
+
+
+*/
