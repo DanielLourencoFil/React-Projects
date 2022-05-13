@@ -12,7 +12,6 @@ import {
 
 const Dashboard = () => {
 	const { loading, gitHubUser } = GlobalContextAPIHook();
-
 	return (
 		<main
 			className={`section-main flex column ${
