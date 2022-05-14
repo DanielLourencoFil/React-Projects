@@ -24,11 +24,21 @@ const Dashboard = () => {
 				</div>
 			) : (
 				<>
-					<Info />
-					<div className="user-followers-container section-center">
-						<User />
-						<Followers />
+					<div className="display-mobile">
+						<div className="user-followers-container section-center">
+							<User />
+							<Info />
+							<Followers />
+						</div>
 					</div>
+					<div className="display-desktop">
+						<Info />
+						<div className="user-followers-container section-center">
+							<User />
+							<Followers />
+						</div>
+					</div>
+
 					<Repos />
 					<div className="footer"></div>
 				</>

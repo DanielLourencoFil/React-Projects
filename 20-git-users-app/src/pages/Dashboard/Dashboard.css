@@ -29,8 +29,19 @@
 	letter-spacing: var(--spacing-200);
 	font-size: 1.325rem;
 }
-
+.display-mobile {
+	display: block;
+}
+.display-desktop {
+	display: none;
+}
 @media (min-width: 600px) {
+	.display-desktop {
+		display: block;
+	}
+	.display-mobile {
+		display: none;
+	}
 	.no-user-display-msg {
 		padding: 1rem 1.5ρεμ;
 		margin-top: 12vh;
