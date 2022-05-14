@@ -20,7 +20,6 @@ const Search = () => {
 		checkScreenWidth(400, setIsSmallScreen);
 		// eslint-disable-next-line
 	});
-
 	return (
 		<div className="section-center search-container flex space-between">
 			<p className="search-input-alert">
@@ -36,7 +35,6 @@ const Search = () => {
 					className="search-input"
 					onChange={(e) => setSearchInput(e.target.value)}
 					onFocus={() => setAlert({ ...alert, status: 0, msg: "" })}
-					on
 					value={searchInput}
 					placeholder="enter github user"
 				/>

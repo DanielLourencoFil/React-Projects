@@ -34,6 +34,9 @@ const Info = () => {
 			color: "#f0b42921",
 		},
 	];
+	if (gitHubUser.length === 0) {
+		return;
+	}
 	return (
 		<section className="section-center info-container">
 			{userInfo.map((info, index) => {

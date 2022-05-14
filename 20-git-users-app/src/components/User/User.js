@@ -9,7 +9,9 @@ const User = () => {
 	const { gitHubUser } = GlobalContextAPIHook();
 	const { avatar_url, html_url, name, login, bio, company, location, blog } =
 		gitHubUser;
-
+	if (gitHubUser.length === 0) {
+		return;
+	}
 	return (
 		<Card text="User">
 			<div className="user-container">

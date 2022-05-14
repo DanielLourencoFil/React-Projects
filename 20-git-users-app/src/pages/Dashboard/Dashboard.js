@@ -11,19 +11,14 @@ import {
 } from "../../components";
 
 const Dashboard = () => {
-	const { loading, gitHubUser, query } = GlobalContextAPIHook();
-	console.log(query, !query);
+	const { loading, gitHubUser, query, alert } = GlobalContextAPIHook();
 	return (
-		<main
-			className={`section-main flex column ${
-				loading?.global && "center"
-			} dashboard `}
-		>
+		<main className={`section-main flex column dashboard `}>
 			<Navbar />
 			<Search />
-			{loading?.global ? (
+			{loading.global ? (
 				<Loader />
-			) : gitHubUser?.length === 0 && !query ? (
+			) : (gitHubUser.length === 0 && !query) || alert.status === 3 ? (
 				<div className="no-user-display-msg">
 					<h1>Please type a gituser to display user info!</h1>
 				</div>

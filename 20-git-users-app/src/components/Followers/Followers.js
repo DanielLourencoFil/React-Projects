@@ -21,7 +21,9 @@ const Followers = () => {
 			}
 		}
 	};
-
+	if (gitHubUser.length === 0) {
+		return;
+	}
 	return (
 		<Card text="followers">
 			<div

@@ -10,7 +10,7 @@ const GlobalContext = ({ children }) => {
 	//loading and alerts
 	const defaultLoading = { global: true, followers: true };
 	const notLoading = { global: false, followers: false };
-	const [loading, setLoading] = useState(defaultLoading);
+	const [loading, setLoading] = useState(notLoading);
 	const [alert, setAlert] = useState({ status: 0, msg: "", disabled: false });
 	//inputs
 	const [searchInput, setSearchInput] = useState("");
@@ -27,19 +27,12 @@ const GlobalContext = ({ children }) => {
 	const [chartData, setChartData] = useState([]);
 
 	const checkRequest = async () => {
-		setLoading(defaultLoading);
 		try {
 			const {
 				data: { rate },
 			} = await axios.get(`${rootUrl}/rate_limit`);
 			setRequests({ limit: rate.limit, remaining: rate.remaining });
-			if (requests.remaining > 0) {
-				setAlert({
-					disabled: false,
-					status: 0,
-					msg: "",
-				});
-			} else {
+			if (requests.remaining === 0) {
 				setAlert({
 					disabled: true,
 					status: 2,
@@ -49,7 +42,6 @@ const GlobalContext = ({ children }) => {
 		} catch (error) {
 			console.log(error);
 		}
-		setLoading(notLoading);
 	};
 	const fetchUser = async () => {
 		setLoading(defaultLoading);
@@ -61,22 +53,24 @@ const GlobalContext = ({ children }) => {
 			const followersResponse = await axios.get(
 				`${rootUrl}/users/${query}/followers?per_page=100&page=${1}`
 			);
-			Promise.allSettled([userResponse, reposResponse, followersResponse]).then(
-				(result) => {
-					const [userResponse, reposResponse, followersResponse] = result;
-					if (userResponse.status === "fulfilled") {
-						setGitHubUser(userResponse.value.data);
-					}
-					if (reposResponse.status === "fulfilled") {
-						setRepos(reposResponse.value.data);
-					}
-					if (followersResponse.status === "fulfilled") {
-						setFollowers(followersResponse.value.data);
-					}
-					setLoading(notLoading);
+			await Promise.allSettled([
+				userResponse,
+				reposResponse,
+				followersResponse,
+			]).then((result) => {
+				const [userResponse, reposResponse, followersResponse] = result;
+				if (userResponse.status === "fulfilled") {
+					setGitHubUser(userResponse.value.data);
 				}
-			);
-			setSearchInput("");
+				if (followersResponse.status === "fulfilled") {
+					setFollowers(followersResponse.value.data);
+				}
+				if (reposResponse.status === "fulfilled") {
+					setRepos(reposResponse.value.data);
+				}
+				setLoading(notLoading);
+				setSearchInput("");
+			});
 		} catch (error) {
 			console.log(error);
 			if (error.response.data.message === "Not Found") {
@@ -112,17 +106,21 @@ const GlobalContext = ({ children }) => {
 	}, []);
 
 	useEffect(() => {
+		setGitHubUser([]);
+		setRepos([]);
+		setFollowers([]);
+		setChartData([]);
 		if (searchInput.length > 0 || query.length > 0) {
 			fetchUser();
 			checkRequest();
 		}
+
 		// eslint-disable-next-line
 	}, [query]);
 
 	//fetch followers for infinity scroll functionality
 	useEffect(() => {
 		if (gitHubUser.length === 0) return; //prevent fetch on initial render
-
 		fetchFollowers();
 		checkRequest();
 		// eslint-disable-next-line
@@ -130,7 +128,7 @@ const GlobalContext = ({ children }) => {
 
 	//calc chart data after fetch user repos
 	useEffect(() => {
-		// if (!repos || repos === undefined || repos.length === 0) return; //prevent fetch on initial render
+		if (!repos || repos.length === 0) return; //prevent fetch on initial render
 
 		const dataLang = calcLanguage(repos);
 		setChartData((data) => {
@@ -145,10 +143,9 @@ const GlobalContext = ({ children }) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setLoading(defaultLoading);
-		setPages(1);
 		let timeout;
 		if (!searchInput) {
+			console.log("btn inner");
 			setAlert({
 				...alert,
 				status: 1,
@@ -158,9 +155,12 @@ const GlobalContext = ({ children }) => {
 				setAlert({ ...alert, status: 0, msg: "" });
 			}, 3500);
 			return () => clearTimeout(timeout);
-		} else {
+		}
+		if (searchInput) {
 			setQuery(searchInput);
 		}
+
+		setPages(1);
 	};
 
 	return (
@@ -191,3 +191,49 @@ export const GlobalContextAPIHook = () => {
 	return useContext(globalContextAPI);
 };
 export default GlobalContext;
+
+// const fetchUser = async () => {
+// 		setLoading(defaultLoading);
+// 		try {
+// 			const userResponse = axios.get(`${rootUrl}/users/${query}`);
+// 			const reposResponse = axios.get(
+// 				`${rootUrl}/users/${query}/repos?per_page=100`
+// 			);
+// 			const followersResponse = axios.get(
+// 				`${rootUrl}/users/${query}/followers?per_page=100&page=${1}`
+// 			);
+// 			Promise.allSettled([userResponse, reposResponse, followersResponse]).then(
+// 				(result) => {
+// 					const [userResponse, reposResponse, followersResponse] = result;
+// 					if (userResponse.status === "fulfilled") {
+// 						setGitHubUser(userResponse.value.data);
+// 					}
+// 					if (followersResponse.status === "fulfilled") {
+// 						setFollowers(followersResponse.value.data);
+// 					}
+// 					if (reposResponse.status === "fulfilled") {
+// 						setRepos(reposResponse.value.data);
+
+// 						//calc data to populate charts
+// 						const dataLang = calcLanguage(repos);
+// 						setChartData((data) => {
+// 							return { ...data, language: dataLang };
+// 						});
+// 						const dataPop = calcReposPopularity(repos);
+// 						setChartData((data) => {
+// 							return { ...data, popularity: dataPop };
+// 						});
+// 					}
+// 					setLoading(notLoading);
+// 					setSearchInput("");
+// 				}
+// 			);
+// 		} catch (error) {
+// 			console.log(error, "error from fetch");
+// 			if (error.response.data.message === "Not Found") {
+// 				console.log("errrrrrrrrrrrrrrrrrrrrrpr");
+// 				setAlert({ ...alert, status: 3, msg: "User not found" });
+// 			}
+// 			setLoading(notLoading);
+// 		}
+// 	};
