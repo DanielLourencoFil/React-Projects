@@ -15,9 +15,12 @@ const App = () => {
 			<SectionProjects
 				title={"Webpages Projects"}
 				data={dataProjectsWebPages}
+			/>
+			<SectionProjects
+				title={"Basic Projects"}
+				data={dataProjects}
 				bgColor={"#fff"}
 			/>
-			<SectionProjects title={"Basic Projects"} data={dataProjects} />
 			<Footer />
 			<BackTopBtn />
 		</>
