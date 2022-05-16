@@ -8,7 +8,7 @@ const Login = () => {
 		<main className="section-main login flex center">
 			<div className="section-center flex column center login-center">
 				<LoginImage />
-				<h1 className="main-title">Github User</h1>
+				<h1 className="main-title">Github Finder</h1>
 				<button className="generic-btn" onClick={() => loginWithRedirect()}>
 					log in / sign up
 				</button>
