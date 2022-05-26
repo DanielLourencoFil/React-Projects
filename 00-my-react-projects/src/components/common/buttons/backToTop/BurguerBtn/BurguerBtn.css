@@ -1,0 +1,76 @@
+.burguer-btn-container {
+	position: absolute;
+	top: 2rem;
+	right: 4rem;
+	height: 1.35rem;
+	margin-right: 5%;
+	margin-left: auto;
+	cursor: pointer;
+	will-change: contents;
+	transition: all 0.5s;
+}
+.burguer-line {
+	position: absolute;
+	width: 1.65rem;
+	height: 0.25rem;
+	left: 0;
+	right: 0;
+	background-color: var(--color-grey-300);
+	border-radius: 2px;
+
+	transition: all 0.5s;
+}
+.burguer-line-up {
+	top: 0;
+	z-index: 2;
+}
+.burguer-line-middle-1 {
+	top: 50%;
+	transform: translateY(-50%);
+}
+.burguer-line-middle-2 {
+	top: 50%;
+	transform: translateY(-50%);
+}
+.burguer-line-down {
+	bottom: 0;
+	z-index: 1;
+}
+.burguer-btn-container:hover {
+	top: 2rem;
+	right: 4rem;
+	transform: scale(1.2);
+}
+.burguer-btn-line:hover {
+	top: 2rem;
+	right: 4rem;
+	transform: scale(1.2);
+}
+/* .burguer-btn-container:hover .burguer-line-up {
+	opacity: 0;
+}
+.burguer-btn-container:hover .burguer-line-down {
+	opacity: 0;
+}
+.burguer-btn-container:hover .burguer-line-middle-1 {
+	width: 1.75rem;
+	transform: rotate(-45deg);
+}
+.burguer-btn-container:hover .burguer-line-middle-2 {
+	width: 1.75rem;
+	transform: rotate(45deg);
+} */
+.burguer-line-up.opacity {
+	opacity: 0;
+}
+.burguer-line-down.opacity {
+	opacity: 0;
+}
+.burguer-line-middle-1.rotate {
+	width: 1.75rem;
+	transform: rotate(-45deg);
+}
+.burguer-line-middle-2.rotate {
+	width: 1.75rem;
+	transform: rotate(45deg);
+}

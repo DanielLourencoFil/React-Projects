@@ -1,0 +1,109 @@
+/* PROJECTS SECTION */
+.projects-container {
+	width: 100%;
+	display: flex;
+	padding: 4rem 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 2rem;
+	background-color: var(--color-five-500);
+	/* background-color: var(--color-five-500); */
+}
+.projects-container:nth-child(odd) {
+	background-image: var(--bg-gradiente);
+}
+.project-cards-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem 2rem;
+}
+.project-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 5px;
+	margin: 0 auto;
+	border-radius: 10px;
+	will-change: contents;
+	transform: scale(0);
+	opacity: 0;
+	box-shadow: var(--box-shadow-500);
+	transition: all 0.5s;
+}
+.card-transition-effect {
+	transition: all 0.5s;
+}
+
+.card-transition-effect:hover {
+	border-radius: 10px;
+	transform: scale(1.1);
+	box-shadow: 2px 2px 10px var(--color-grey-500);
+}
+
+.project-card.active {
+	animation: show-card 1.2s ease-in-out forwards;
+}
+
+.card-footer {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--primary-color-100);
+	width: 100%;
+	height: 100px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.card-title {
+	color: var(--color-four-500);
+	font-size: 1.25rem;
+	letter-spacing: 1px;
+	font-weight: 400;
+}
+.card-icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-25%);
+	right: 1.25rem;
+	border: transparent;
+	background-color: transparent;
+	font-size: 1.25rem;
+	opacity: 0;
+	cursor: pointer;
+	will-change: contents;
+	transition: all 0.5s;
+}
+.project-card:hover .card-icon {
+	opacity: 1;
+}
+.card-img {
+	object-fit: contain;
+	border-bottom: 1px solid var(--primary-color-500);
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+}
+@media (min-width: 700px) {
+	.project-cards-container {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media (min-width: 1000px) {
+	.project-cards-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@keyframes show-card {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}

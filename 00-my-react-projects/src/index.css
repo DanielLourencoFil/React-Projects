@@ -1,14 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
 /* VARIABLES */
 :root {
+	--color-one-500: #2274a5;
+	--color-one-500a: #61dafb;
+	--color-two-500: #e9b949;
+	--color-two-500-a: rgba(233, 185, 73, 0.6);
+	--color-tree-500: #6baa75;
+	--color-four-500: #30362f;
+	--color-five-500: #1e1e24;
+	--color-five-500a: #1e1e2483;
+	--color-light-100: #fff;
+	--color-dark-900: #000;
+	--bg-gradiente: linear-gradient(
+		90deg,
+		var(--color-dark-900),
+		var(--color-five-500)
+	);
+
+	--js-color-100: #d6ba32;
+	--js-color-200: #fffae0;
+	--css-color-100: #285ea8;
+	--html-color-100: #c14723;
+
+	--box-shadow-500: 3px 3px 10px -2px var(--color-dark-900);
+	--border-radius-200: 0.5rem;
+	--spacing-100: 1px;
+	--spacing-200: 2px;
+	--font-1: "Poppins", sans-serif;
+
+	--color-grey-200: #ddd;
+	--color-grey-300: #999;
+	--color-grey-500: #555;
+
 	--primary-color-100: #fff;
 	--primary-color-400: #555;
 	--primary-color-500: #ddd;
-	--primary-color-600: #61dafb;
-	--background-color-100: #d3f5ff;
 	--primary-color-700: #012d5f;
 	--primary-color-900: #6f00ff;
-	--secondary-color-900: rgba(255, 0, 0, 0.635);
-	--box-shadow-500: 1px 1px 10px -2px #5a5a5a;
+	--color-dark-700: #012d5f;
+	--background-color-100: #d3f5ff;
+	--secondary-color-200: rgb(255, 233, 183);
+	--secondary-color-500: #e9b949;
+	--color-alert: #ff0400;
+	/* --secondary-color-900: rgba(255, 0, 0, 0.635); */
 }
 html {
 	scroll-behavior: smooth;
@@ -28,16 +63,75 @@ a {
 }
 a:active,
 a:visited {
-	color: var(--primary-color-700);
+	color: inherit;
+}
+li {
+	list-style: none;
 }
 button {
 	cursor: pointer;
 }
 body {
+	overflow-x: hidden;
+	background-color: var(--color-five-500);
+	background-image: var(--bg-gradiente);
+	font-family: var(--font-1);
+	color: var(--color-light-100);
+	letter-spacing: var(--spacing-100);
+}
+.section-main {
 	width: 100vw;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-		sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	max-width: 100%;
+	margin: 0;
+}
+
+.section-center {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+.big-screen {
+	display: none;
+}
+.hide-btn {
+	display: none !important;
+}
+.hide-btn-mobile {
+	display: none;
+}
+@media (min-width: 800px) {
+	.mobile {
+		display: none !important;
+	}
+	.big-screen {
+		display: block;
+	}
+	.section-center {
+		width: 85%;
+	}
+}
+/* BUTTONS */
+
+.generic-01-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--font-1);
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: var(--spacing-200);
+	color: var(--color-dark-700);
+	text-shadow: 1px 1px var(--color-grey-500);
+	border-radius: var(--border-radius-200);
+	background-color: var(--color-two-500-a);
+	border: 2px solid var(--color-two-500);
+	width: 12rem;
+	padding: 0.35rem;
+	box-shadow: var(--box-shadow-500);
+	transition: all 0.3s;
+}
+.generic-01-btn:hover {
+	background-color: var(--color-two-500);
+	color: var(--color-light-100);
 }

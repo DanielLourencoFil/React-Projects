@@ -1,3 +1,13 @@
+export const dataProjectsSpecial = [
+	{
+		img: "../images/20-github-users.png",
+		title: "Github Users Search App",
+		url: "https://github-search-app-20.netlify.app/",
+		urlGithub:
+			"https://github.com/DanielLourencoFil/React-Projects/tree/main/20-git-users-app",
+	},
+];
+
 const dataProjectsOriginal = [
 	{
 		img: "../images/01-reminder.png",
@@ -97,27 +107,13 @@ const dataProjectsOriginal = [
 		urlGithub:
 			"https://github.com/DanielLourencoFil/React-Projects/tree/main/14-shop-cart",
 	},
-	{
-		img: "../images/15-cocktailsDB.png",
-		title: "Cocktails DB",
-		url: "https://cocktails-db-react-project-15.netlify.app/",
-		urlGithub:
-			"https://github.com/DanielLourencoFil/React-Projects/tree/main/15-cocktails",
-	},
+
 	{
 		img: "../images/16-pagination.png",
 		title: "Pagination GitUsers",
 		url: "https://pagination-gitusers-16.netlify.app/",
 		urlGithub:
 			"https://github.com/DanielLourencoFil/React-Projects/tree/main/16-pagination",
-	},
-
-	{
-		img: "../images/18-feedback-ui.png",
-		title: "Feedback UI",
-		url: "https://feedback-ui-18.netlify.app/",
-		urlGithub:
-			"https://github.com/DanielLourencoFil/React-Projects/tree/main/18-feedback-ui",
 	},
 ];
 
@@ -132,6 +128,30 @@ export const dataProjectsWebPages = [
 			"https://github.com/DanielLourencoFil/React-Projects/tree/main/20-git-users-app",
 	},
 	{
+		img: "../images/15-cocktailsDB.png",
+		title: "Cocktails DB",
+		url: "https://cocktails-db-react-project-15.netlify.app/",
+		urlGithub:
+			"https://github.com/DanielLourencoFil/React-Projects/tree/main/15-cocktails",
+	},
+	{
+		img: "../images/18-feedback-ui.png",
+		title: "Feedback UI",
+		url: "https://feedback-ui-18.netlify.app/",
+		urlGithub:
+			"https://github.com/DanielLourencoFil/React-Projects/tree/main/18-feedback-ui",
+	},
+];
+
+// {
+// 	img: "../images/17-stock-photos.png",
+// 	title: "Stock Photos App",
+// 	url: "https://stock-photos-17.netlify.app/",
+// 	urlGithub:
+// 		"https://github.com/DanielLourencoFil/React-Projects/tree/main/17-stock-photos",
+// },
+/*
+{
 		img: "../images/webpage-project-01.png",
 		title: "React Projects Porfolio",
 		url: "https://react-projects-main.netlify.app/",
@@ -144,12 +164,5 @@ export const dataProjectsWebPages = [
 		url: "https://vanilla-land-js-projects.netlify.app/",
 		urlGithub: "https://github.com/DanielLourencoFil/vanillaJs-land-projects",
 	},
-];
 
-// {
-// 	img: "../images/17-stock-photos.png",
-// 	title: "Stock Photos App",
-// 	url: "https://stock-photos-17.netlify.app/",
-// 	urlGithub:
-// 		"https://github.com/DanielLourencoFil/React-Projects/tree/main/17-stock-photos",
-// },
+*/

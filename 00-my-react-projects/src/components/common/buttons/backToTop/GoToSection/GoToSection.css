@@ -1,0 +1,51 @@
+.go-to-section-btn {
+	position: absolute;
+	bottom: 3rem;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+	transition: all 0.3s;
+	z-index: 3;
+}
+.left-side-arrow-btn {
+	position: absolute;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+
+	top: 0;
+	transform: translateX(-150%) rotate(-45deg);
+	width: 5px;
+	height: 25px;
+	background-color: var(--color-light-100);
+	transition: all 0.3s;
+}
+.right-side-arrow-btn {
+	position: absolute;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	top: 0;
+	left: 50%;
+	transform: translateX(150%) rotate(45deg);
+	width: 5px;
+	height: 25px;
+	background-color: var(--color-light-100);
+	transition: all 0.3s;
+}
+
+.go-to-section-btn:hover .left-side-arrow-btn {
+	top: 0;
+	left: 50%;
+	transform: translateX(-90%) rotate(-25deg);
+	background-color: var(--color-two-500);
+}
+.go-to-section-btn:hover .right-side-arrow-btn {
+	top: 0;
+	left: 50%;
+	transform: translateX(90%) rotate(25deg);
+	background-color: var(--color-two-500);
+}
+.reverse-btn {
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%) rotateX(180deg);
+}

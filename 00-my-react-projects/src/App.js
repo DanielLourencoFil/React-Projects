@@ -1,29 +1,56 @@
-import SectionProjects from "./components/SectionProjects";
-import Hero from "./components/Hero";
-import Loading from "./components/Loading";
-import { dataProjects, dataProjectsWebPages } from "./dataProjects";
-import Footer from "./components/Footer";
-import BackTopBtn from "./components/BackTopBtn";
+import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Loading from "./components/common/loading/Loading";
+import { Landing } from "./components";
+import ReactProjects from "./pages/reactProjects/ReactProjects";
+import VanillaJSProjects from "./pages/vanillaJSProjects/VanillaJSProjects";
+import SharedDesign from "./pages/SharedDesign/SharedDesign";
+import Contact from "./components/Contact/Contact";
 
 const App = () => {
+	const [isAbout, setIsAbout] = useState(false);
+	const [showProjectsBtn, setShowProjectsBtn] = useState(false);
+
 	return (
-		<>
+		<div className="section-main">
 			{document.addEventListener("DOMContentLoaded", () => {
 				<Loading />;
 			})}
-			<Hero />
-			<SectionProjects
-				title={"Webpages Projects"}
-				data={dataProjectsWebPages}
-			/>
-			<SectionProjects
-				title={"Basic Projects"}
-				data={dataProjects}
-				bgColor={"#fff"}
-			/>
-			<Footer />
-			<BackTopBtn />
-		</>
+			<BrowserRouter>
+				<Routes>
+					<Route
+						path="/"
+						element={
+							<SharedDesign
+								isAbout={isAbout}
+								setIsAbout={setIsAbout}
+								showProjectsBtn={showProjectsBtn}
+								setShowProjectsBtn={setShowProjectsBtn}
+							/>
+						}
+					>
+						<Route
+							exact
+							path="/"
+							element={
+								<Landing
+									isAbout={isAbout}
+									setIsAbout={setIsAbout}
+									showProjectsBtn={showProjectsBtn}
+									setShowProjectsBtn={setShowProjectsBtn}
+								/>
+							}
+						/>
+						<Route path="/react-projects" element={<ReactProjects />} />
+						<Route
+							path="/vanilla-js-projects"
+							element={<VanillaJSProjects />}
+						/>
+						<Route path="/contact" element={<Contact />} />
+					</Route>
+				</Routes>
+			</BrowserRouter>
+		</div>
 	);
 };
 

@@ -1,0 +1,65 @@
+.about-container {
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	top: -100vh;
+	left: 0;
+	width: 50%;
+	gap: 1rem;
+	padding-left: 10%;
+	padding-right: 5%;
+	transition: all 0.75s;
+	background-size: 200%;
+	background-image: var(--bg-gradiente);
+	z-index: 1;
+}
+.about-container p {
+	text-align: justify;
+	margin-bottom: 1rem;
+}
+.about-btns-container {
+	margin-top: 2rem;
+	display: flex;
+	gap: 1rem;
+}
+.about-btns-container.mobile {
+	margin-top: 0;
+}
+.about-btns-container.big-screen {
+	display: none;
+}
+@media (min-width: 800px) {
+	.about-btns-container.big-screen {
+		display: flex;
+	}
+	.about-container {
+		display: flex;
+	}
+}
+.show-about {
+	top: 0;
+}
+.about-projects-btns-container {
+	position: relative;
+}
+.projects-btn {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: -1;
+	transition: all 0.5s;
+}
+.show-react-projects-btn {
+	opacity: 1;
+	top: 115%;
+	z-index: 0;
+}
+.show-vanilla-projects-btn {
+	opacity: 1;
+	z-index: 0;
+	top: 225%;
+}
