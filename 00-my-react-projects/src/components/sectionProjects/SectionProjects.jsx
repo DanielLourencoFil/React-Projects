@@ -2,7 +2,14 @@ import ProjectCard from "./projectCard/ProjectCard";
 import MainTitle from "../common/title/MainTitle";
 import "./sectionProjects.css";
 
-function SectionProjects({ data, title, bgColor, display, underlineColor }) {
+function SectionProjects({
+	data,
+	title,
+	bgColor,
+	display,
+	underlineColor,
+	width,
+}) {
 	return (
 		<section
 			id="projects"
@@ -11,7 +18,7 @@ function SectionProjects({ data, title, bgColor, display, underlineColor }) {
 		>
 			<MainTitle title={title} underlineColor={underlineColor} />
 			<div
-				style={{ display: display }}
+				style={{ display: display, width: width }}
 				className="project-cards-container section-center"
 			>
 				{data.map((item, index) => {

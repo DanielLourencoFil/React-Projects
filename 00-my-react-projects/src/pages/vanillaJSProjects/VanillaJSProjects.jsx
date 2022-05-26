@@ -16,7 +16,7 @@ const VanillaJSProjects = () => {
 				data={dataProjectsSpecial}
 				title={"Special Project"}
 				display={"flex"}
-				width={"60%"}
+				width={"55%"}
 				underlineColor={"#e9b949"}
 			/>
 			<SectionProjects
