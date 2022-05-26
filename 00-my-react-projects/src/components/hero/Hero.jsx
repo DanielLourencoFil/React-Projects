@@ -1,11 +1,9 @@
 import React from "react";
-import NavBar from "../navBar/NavBar";
 import "./hero.css";
 
 const Hero = () => {
 	return (
 		<header id="top" className="header section-main">
-			{/* <NavBar /> */}
 			<div className="hero section-center">
 				<div className="hero-info-container">
 					<h1 className="main-title hero-title">React Projects</h1>

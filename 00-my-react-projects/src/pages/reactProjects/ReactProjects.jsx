@@ -1,4 +1,4 @@
-import { SectionProjects, Hero, Footer } from "../../components";
+import { SectionProjects, Hero } from "../../components";
 import { BackTopBtn } from "../../components/common/common";
 import {
 	dataProjects,
@@ -27,7 +27,6 @@ const ReactProjects = () => {
 				data={dataProjects}
 				underlineColor={"#61dafb"}
 			/>
-			{/* <Footer /> */}
 			<BackTopBtn returnTo={"#top"} />
 		</div>
 	);

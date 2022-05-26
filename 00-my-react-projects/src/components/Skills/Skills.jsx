@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import "./Skills.css";
 import axios from "axios";
 import { calcLanguage } from "./Chart/calcLanguage";
@@ -7,7 +7,6 @@ import Pie2d from "./Chart/Pie2d";
 const Skills = () => {
 	const [data, setData] = useState([]);
 	const [calcData, setCalcData] = useState([]);
-	const [screenWidth, setScreenWidth] = useState("");
 	const skills = [
 		{
 			name: "HTML 5",
@@ -34,21 +33,21 @@ const Skills = () => {
 			level: 65,
 		},
 		{
-			name: "NODE / EXPRESS",
-			level: 40,
-		},
-		{
 			name: "AJAX / REST API",
 			level: 90,
 		},
 		{
-			name: "SEO",
-			level: 30,
+			name: "NODE / EXPRESS",
+			level: 40,
 		},
-		{
-			name: "Agile - Scrum",
-			level: 35,
-		},
+		// {
+		// 	name: "SEO",
+		// 	level: 30,
+		// },
+		// {
+		// 	name: "Agile - Scrum",
+		// 	level: 35,
+		// },
 	];
 
 	useEffect(() => {

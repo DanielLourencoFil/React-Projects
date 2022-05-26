@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { FaTimes } from "react-icons/fa";
 import "./PopUp.css";
 
