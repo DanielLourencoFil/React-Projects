@@ -128,6 +128,13 @@ export const dataProjectsWebPages = [
 			"https://github.com/DanielLourencoFil/React-Projects/tree/main/20-git-users-app",
 	},
 	{
+		img: "../images/portfolio-webpage.png",
+		title: "My Porfolio",
+		url: "https://daniel-lourenco-portfolio.netlify.app/",
+		urlGithub:
+			"https://github.com/DanielLourencoFil/React-Projects/tree/main/00-my-react-projects",
+	},
+	{
 		img: "../images/15-cocktailsDB.png",
 		title: "Cocktails DB",
 		url: "https://cocktails-db-react-project-15.netlify.app/",
