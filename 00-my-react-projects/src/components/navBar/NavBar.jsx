@@ -85,11 +85,11 @@ const NavBar = ({ setIsAbout, setShowProjectsBtn }) => {
 							Vanilla Js Projects
 						</li>
 					</Link>
-					<a href="/contact">
+					<Link to="/contact">
 						<li className="navlinks" onClick={() => handleLink("contact")}>
 							Contact
 						</li>
-					</a>
+					</Link>
 				</ul>
 			</div>
 		</nav>
