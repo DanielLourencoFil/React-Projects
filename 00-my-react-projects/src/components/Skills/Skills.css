@@ -4,7 +4,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-
+	margin: 3rem auto;
 	background-image: linear-gradient(
 		90deg,
 		var(--color-dark-900),

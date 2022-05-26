@@ -27,6 +27,7 @@
 }
 .about-btns-container.mobile {
 	margin-top: 0;
+	flex-direction: column-reverse;
 }
 .about-btns-container.big-screen {
 	display: none;
