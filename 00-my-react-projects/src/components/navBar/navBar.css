@@ -1,7 +1,7 @@
 /* NAVBAR */
 .nav-container {
 	position: fixed;
-	height: 12vh;
+	height: 10vh;
 	top: 0;
 	left: 0;
 	width: 100vw;
@@ -12,6 +12,7 @@
 		top 0.3s 0.5s linear;
 	z-index: 2;
 }
+
 .nav-container.hide-navbar {
 	top: -100%;
 }
@@ -22,6 +23,7 @@
 	box-shadow: var(--box-shadow-500);
 }
 .nav-center {
+	position: relative;
 	height: 0;
 	overflow: hidden;
 	width: 80%;
