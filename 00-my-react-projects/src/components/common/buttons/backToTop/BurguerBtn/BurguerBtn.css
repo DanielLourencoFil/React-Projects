@@ -7,6 +7,7 @@
 	cursor: pointer;
 	will-change: contents;
 	transition: all 0.5s;
+	z-index: 5;
 }
 .burguer-line {
 	position: absolute;
@@ -14,7 +15,6 @@
 	height: 0.25rem;
 	left: 0;
 	right: 0;
-	right: clamp(2rem, 10%, 8rem);
 
 	background-color: var(--color-grey-300);
 	border-radius: 2px;
