@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { SectionProjects, Hero } from "../../components";
 import { BackTopBtn } from "../../components/common/common";
 import {
@@ -7,6 +8,15 @@ import {
 } from "../../dataProjects";
 
 const ReactProjects = () => {
+	const [width, setWidth] = useState("55%");
+
+	useEffect(() => {
+		if (window.innerWidth < 799) {
+			setWidth("85%");
+		} else {
+			setWidth("55%");
+		}
+	});
 	return (
 		<div className="section-main">
 			<Hero />
@@ -14,7 +24,7 @@ const ReactProjects = () => {
 				data={dataProjectsSpecial}
 				title={"Special Project"}
 				display={"flex"}
-				width={"55%"}
+				width={width}
 				underlineColor={"#61dafb"}
 			/>
 			<SectionProjects

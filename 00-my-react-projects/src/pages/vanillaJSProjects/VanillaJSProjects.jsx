@@ -1,4 +1,4 @@
-// import { SectionProjects, HeroJS, Footer } from "../../components";
+import { useEffect, useState } from "react";
 import { SectionProjects, HeroJS } from "../../components";
 import { BackTopBtn } from "../../components/common/common";
 import {
@@ -8,6 +8,15 @@ import {
 } from "../../dataProjectsJS";
 
 const VanillaJSProjects = () => {
+	const [width, setWidth] = useState("55%");
+
+	useEffect(() => {
+		if (window.innerWidth < 799) {
+			setWidth("85%");
+		} else {
+			setWidth("55%");
+		}
+	});
 	return (
 		<div className="section-main">
 			<HeroJS />
@@ -16,7 +25,7 @@ const VanillaJSProjects = () => {
 				data={dataProjectsSpecial}
 				title={"Special Project"}
 				display={"flex"}
-				width={"55%"}
+				width={width}
 				underlineColor={"#e9b949"}
 			/>
 			<SectionProjects
