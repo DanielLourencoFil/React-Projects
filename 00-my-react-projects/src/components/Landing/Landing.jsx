@@ -56,8 +56,8 @@ porfolio!`,
 			clearTimeout(timeout);
 		};
 	};
-	let timeout;
 	useEffect(() => {
+		let timeout;
 		clearTimeout(timeout);
 		timeout = setTimeout(() => {
 			typingEffect(textArray, titleRef, subRef);
@@ -66,10 +66,7 @@ porfolio!`,
 			clearTimeout(timeout);
 		};
 	}, [visitorName]);
-	// const handleBtn = (e) => {
-	// 	console.log(e.target);
-	// 	setIsAbout(true);
-	// };
+
 	return (
 		<>
 			{isPopUp && (
