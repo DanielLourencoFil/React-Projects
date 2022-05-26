@@ -36,7 +36,6 @@
 .skills-list {
 	display: grid;
 	width: 100%;
-	/* grid-template-columns: 1fr 1fr; */
 	grid-template-columns: 1fr;
 	gap: 1.5rem;
 }
@@ -75,14 +74,13 @@
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-	width: 70%;
+	width: 85%;
 }
 .skills-chart div {
 	width: 100% !important;
 }
 .skills-chart .fusioncharts-container {
 	width: 100% !important;
-	/* border-radius: var(--border-radius-200); */
 }
 .skills-chart svg {
 	width: 100% !important;
