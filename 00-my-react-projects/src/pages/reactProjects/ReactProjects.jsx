@@ -14,7 +14,7 @@ const ReactProjects = () => {
 				data={dataProjectsSpecial}
 				title={"Special Project"}
 				display={"flex"}
-				width={"60%"}
+				width={"50%"}
 				underlineColor={"#61dafb"}
 			/>
 			<SectionProjects
