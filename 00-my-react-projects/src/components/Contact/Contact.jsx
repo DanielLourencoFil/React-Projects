@@ -1,6 +1,7 @@
 import "./Contact.css";
 import { useState, useRef } from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { SocialIcons } from "../common/common";
 
 const Contact = () => {
 	const [name, setName] = useState("");
@@ -85,14 +86,16 @@ const Contact = () => {
 						field="message"
 						errors={state.errors}
 					/>
-
-					<button
-						className="contact-btn popup-btn"
-						type="submit"
-						disabled={state.submitting}
-					>
-						send
-					</button>
+					<div className="social-icons-submit-btn-container">
+						<SocialIcons />
+						<button
+							className="contact-btn popup-btn"
+							type="submit"
+							disabled={state.submitting}
+						>
+							send
+						</button>
+					</div>
 				</div>
 			</form>
 		</div>

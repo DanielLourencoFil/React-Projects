@@ -89,19 +89,11 @@
 	letter-spacing: 1px;
 	transition: all 0.3s ease-in-out;
 }
-/* .contact-close-btn {
-	position: absolute;
-	font-size: 1.25rem;
-	top: 0;
-	right: 0;
-	margin: 1rem 1.5rem;
-	cursor: pointer;
-	transition: color 0.3s;
-} */
-/* .contact-close-btn:hover {
-	color: var(--color-alert);
-} */
-
+.social-icons-submit-btn-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
 @keyframes popup {
 	0% {
 		transform: scale(0);
