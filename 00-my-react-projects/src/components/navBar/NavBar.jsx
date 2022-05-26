@@ -13,7 +13,6 @@ const NavBar = ({ setIsAbout, setShowProjectsBtn }) => {
 			setHideNavbar(true);
 			timeout = setTimeout(() => {
 				setHideNavbar(false);
-				console.log("yes");
 			}, 500);
 
 			return () => window.removeEventListener("scroll", event);
