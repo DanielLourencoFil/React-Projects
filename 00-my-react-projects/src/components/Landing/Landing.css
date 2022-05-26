@@ -226,7 +226,7 @@
 		text-align: left;
 	}
 	.landing-photo-section {
-		align-items: flex-end;
+		/* align-items: flex-end; */
 		width: 50%;
 		border-color: transparent;
 		right: -100%;
