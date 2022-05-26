@@ -2,7 +2,9 @@
 	position: absolute;
 	top: 2rem;
 	right: 4rem;
-	height: 1.35rem;
+	/* height: 1.35rem; */
+	height: 1.55rem;
+	width: 1.75rem;
 	margin-right: 5%;
 	margin-left: auto;
 	cursor: pointer;
@@ -11,7 +13,7 @@
 }
 .burguer-line {
 	position: absolute;
-	width: 1.65rem;
+	width: 1.75rem;
 	height: 0.25rem;
 	left: 0;
 	right: 0;
