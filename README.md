@@ -14,6 +14,6 @@ are inspired by the exercises of courses I took. The final result contains my so
 
 ## View page
 
-[Visit the project](https://react-projects-main.netlify.app/)
+[Visit the project](https://daniel-lourenco-portfolio.netlify.app/)
 
 Thanks to visiting me and good coding!
