@@ -2,13 +2,9 @@
 	position: relative;
 	overflow-x: hidden;
 }
-/* .fixed {
-	position: fixed !important;
-	height: 100vh;
-	z-index: 5;
-} */
+
 .landing {
-	height: 110vh;
+	min-height: 100vh;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -78,7 +74,7 @@
 /* PHOTO SIDE */
 .landing-photo-section {
 	position: relative;
-	min-height: 140vh;
+	min-height: 120vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -175,14 +171,12 @@
 .hire-btn {
 	position: relative;
 	right: -100vw;
-	/* right: 0; */
 	margin: 0 auto;
 	transition: display 0.1s right 0.5s 0.2s ease-in-out;
 }
 
 .show-hire-btn-big-screen {
 	right: 0;
-	/* animation: entry-effect-01 1s ease-in-out; */
 }
 
 @keyframes entry-effect-01 {

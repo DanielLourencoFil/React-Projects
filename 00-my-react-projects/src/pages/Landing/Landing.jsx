@@ -110,7 +110,7 @@ porfolio!`,
 							</div>
 							{/* BIG SCREEN BTN */}
 							<button
-								className={`landing-btn generic-01-btn hide-btn hire-btn ${
+								className={` hire-btn landing-btn generic-01-btn hide-btn  ${
 									!isAbout && "show-hire-btn-big-screen"
 								}`}
 								onClick={() => setIsAbout(true)}
@@ -119,7 +119,7 @@ porfolio!`,
 							</button>
 							<Link to="/contact">
 								<button
-									className={`landing-btn generic-01-btn hide-btn hire-btn ${
+									className={`hire-btn landing-btn generic-01-btn hide-btn  ${
 										isAbout && "show-hire-btn-big-screen"
 									}`}
 								>
