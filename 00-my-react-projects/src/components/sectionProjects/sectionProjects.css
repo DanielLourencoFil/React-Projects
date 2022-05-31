@@ -61,6 +61,8 @@
 	border-bottom-left-radius: 4px;
 }
 .card-title {
+	width: 80%;
+	text-align: center;
 	color: var(--color-four-500);
 	font-size: 1.25rem;
 	letter-spacing: 1px;
