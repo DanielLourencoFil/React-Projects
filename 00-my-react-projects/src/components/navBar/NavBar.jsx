@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./navBar.css";
 import { BurguerBtn } from "../common/common";
 const NavBar = ({ setIsAbout, setShowProjectsBtn }) => {
+	const navigate = useNavigate();
 	const [toggle, setToggle] = useState(false);
 	const [hideNavbar, setHideNavbar] = useState(false);
 	useEffect(() => {
@@ -26,6 +27,7 @@ const NavBar = ({ setIsAbout, setShowProjectsBtn }) => {
 			setShowProjectsBtn(false);
 		}
 		if (link === "about") {
+			navigate("/");
 			setIsAbout(true);
 			setShowProjectsBtn(false);
 		}
@@ -34,6 +36,7 @@ const NavBar = ({ setIsAbout, setShowProjectsBtn }) => {
 			setShowProjectsBtn(false);
 		}
 		if (link === "skills") {
+			navigate("/");
 			setIsAbout(false);
 			setShowProjectsBtn(false);
 		}
@@ -57,11 +60,12 @@ const NavBar = ({ setIsAbout, setShowProjectsBtn }) => {
 							Home
 						</li>
 					</Link>
-					<Link to="/" className="big-screen">
+
+					<a href="#landing-container" className="big-screen">
 						<li className="navlinks" onClick={() => handleLink("about")}>
 							About
 						</li>
-					</Link>
+					</a>
 
 					<a href="#landing-photo-section" className="mobile">
 						<li className="navlinks" onClick={() => handleLink("about-mobile")}>
