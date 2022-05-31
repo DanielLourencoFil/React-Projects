@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Loading from "./components/common/loading/Loading";
-import { Landing } from "./components";
+import Landing from "./pages/Landing/Landing";
 import ReactProjects from "./pages/reactProjects/ReactProjects";
 import VanillaJSProjects from "./pages/vanillaJSProjects/VanillaJSProjects";
 import SharedDesign from "./pages/SharedDesign/SharedDesign";

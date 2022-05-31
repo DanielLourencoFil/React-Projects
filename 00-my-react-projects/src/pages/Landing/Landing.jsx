@@ -1,17 +1,14 @@
 import "./Landing.css";
-import "./About.css";
 import { useEffect, useState, useRef } from "react";
 import typingEffect from "../../utils/typingEffect";
 import {
 	PopUp,
 	GoToSectionBtn,
-	SocialIcons,
 	BackTopBtn,
-} from "../common/common";
+} from "../../components/common/common";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Skills from "../Skills/Skills";
-
+import { Skills, About } from "../../components";
 const Landing = ({
 	isAbout,
 	setIsAbout,
@@ -22,6 +19,7 @@ const Landing = ({
 	const [isName, setIsName] = useState(false);
 	const [isPopUp, setIsPopUp] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
+	const landingRef = useRef();
 
 	const titleRef = useRef();
 	const subRef = useRef();
@@ -72,7 +70,7 @@ porfolio!`,
 			{isPopUp && (
 				<PopUp handleSubmit={handleSubmitVisitorName} setIsPopUp={setIsPopUp} />
 			)}
-			<LandingAbout
+			<About
 				setIsAbout={setIsAbout}
 				isAbout={isAbout}
 				setShowProjectsBtn={setShowProjectsBtn}
@@ -81,8 +79,9 @@ porfolio!`,
 			<section
 				id="landing-container"
 				className="landing-container section-main"
+				ref={landingRef}
 			>
-				<div className="section-center landing">
+				<div className={`section-center landing fixed `}>
 					{/* LANDING TEXT = TYPING EFFECT */}
 					<LandingText
 						isName={isName}
@@ -110,6 +109,14 @@ porfolio!`,
 								</div>
 							</div>
 							{/* BIG SCREEN BTN */}
+							<button
+								className={`landing-btn generic-01-btn hide-btn hire-btn ${
+									!isAbout && "show-hire-btn-big-screen"
+								}`}
+								onClick={() => setIsAbout(true)}
+							>
+								About Me
+							</button>
 							<Link to="/contact">
 								<button
 									className={`landing-btn generic-01-btn hide-btn hire-btn ${
@@ -223,52 +230,4 @@ const LandingText = ({ isName, titleRef, subRef, setIsPopUp }) => {
 	);
 };
 
-const LandingAbout = ({ isAbout, showProjectsBtn, setShowProjectsBtn }) => {
-	return (
-		<section
-			className={`about-container big-screen ${isAbout && "show-about"}`}
-		>
-			<p>
-				My name is Daniel Lourenço. I'm a Brazilian/German self-taught front-end
-				web developer in search of new opportunities in the field.
-			</p>
-
-			<p>
-				I'm a highly motivated guy, passionate for languages (natural and
-				artificial ones), suffering from a quasi-obsession for critical thinking
-				and logic, and not afraid (not at all) of challenges.
-			</p>
-			<SocialIcons />
-			<div className="about-btns-container big-screen">
-				<div className="about-projects-btns-container">
-					<button
-						className="landing-btn generic-01-btn"
-						onClick={() => setShowProjectsBtn(!showProjectsBtn)}
-					>
-						My Projects
-					</button>
-					<Link
-						to="/react-projects"
-						className={`landing-btn generic-01-btn projects-btn react-projects-btn  ${
-							showProjectsBtn && "show-react-projects-btn"
-						}`}
-					>
-						React JS
-					</Link>
-					<Link
-						to="/vanilla-js-projects"
-						className={`landing-btn generic-01-btn projects-btn vanilla-projects-btn  ${
-							showProjectsBtn && "show-vanilla-projects-btn"
-						}`}
-					>
-						Vanilla JS{" "}
-					</Link>
-				</div>
-				<a href="#skills">
-					<button className="landing-btn generic-01-btn ">My Skills</button>
-				</a>
-			</div>
-		</section>
-	);
-};
 export default Landing;
