@@ -1,10 +1,9 @@
 export const dataProjectsSpecial = [
 	{
-		img: "../images/20-github-users.png",
-		title: "Github Users Search App",
-		url: "https://github-search-app-20.netlify.app/",
-		urlGithub:
-			"https://github.com/DanielLourencoFil/React-Projects/tree/main/20-git-users-app",
+		img: "../images/market-place-project-03.png",
+		title: "Market Place App",
+		url: "https://market-place-app.netlify.app/",
+		urlGithub: "https://github.com/DanielLourencoFil/House-Market-Place-App",
 	},
 ];
 
