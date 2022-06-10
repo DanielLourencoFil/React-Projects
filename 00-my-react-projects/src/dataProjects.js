@@ -2,7 +2,7 @@ export const dataProjectsSpecial = [
 	{
 		img: "../images/market-place-project-03.png",
 		title: "Market Place App",
-		url: "https://market-place-app.netlify.app/",
+		url: "https://house-market-place-app.netlify.app/",
 		urlGithub: "https://github.com/DanielLourencoFil/House-Market-Place-App",
 	},
 ];
