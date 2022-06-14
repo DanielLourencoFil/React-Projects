@@ -28,7 +28,7 @@ const ReactProjects = () => {
 				underlineColor={"#61dafb"}
 			/>
 			<SectionProjects
-				title={"Webpages Projects"}
+				title={"Webpages"}
 				data={dataProjectsWebPages}
 				underlineColor={"#61dafb"}
 			/>
