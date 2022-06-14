@@ -13,7 +13,6 @@ const ProjectCard = ({ data }) => {
 	const getPosition = () => {
 		const event = window.addEventListener("scroll", () => {
 			if (refCard.current !== null) {
-				// console.log(refCard.current.getBoundingClientRect().top);
 				const itemPosition = refCard.current.getBoundingClientRect().top;
 				if (itemPosition < window.innerHeight) {
 					setIsVisible(true);
@@ -30,9 +29,11 @@ const ProjectCard = ({ data }) => {
 				ref={refCard}
 				className={` ${isVisible ? " active project-card" : "project-card"}`}
 			>
-				<a href={url} target="_blank" rel="noreferrer">
-					<img className="card-img" src={img} alt={title} />
-				</a>
+				<div className="img-container">
+					<a href={url} target="_blank" rel="noreferrer">
+						<img className="card-img" src={img} alt={title} />
+					</a>
+				</div>
 				<div className="card-footer">
 					<h2 className="card-title">{title}</h2>
 					<button className="card-icon">
