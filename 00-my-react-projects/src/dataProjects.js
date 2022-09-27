@@ -153,6 +153,12 @@ export const dataProjectsWebPages = [
 		urlGithub:
 			"https://github.com/DanielLourencoFil/React-Projects/tree/main/18-feedback-ui",
 	},
+	{
+		img: "../images/pokemon-app(nextjs)-project-04.png",
+		title: "Pokemon app (NextJs)",
+		url: "https://pokemon-app-nextjs-pearl.vercel.app/",
+		urlGithub: "https://github.com/DanielLourencoFil/Pokemon-App-NextJs-",
+	},
 ];
 
 // {
