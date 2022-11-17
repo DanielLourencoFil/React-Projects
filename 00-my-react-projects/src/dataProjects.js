@@ -1,9 +1,9 @@
 export const dataProjectsSpecial = [
 	{
-		img: "../images/market-place-project-03.png",
-		title: "Market Place App",
-		url: "https://house-market-place-app.netlify.app/",
-		urlGithub: "https://github.com/DanielLourencoFil/House-Market-Place-App",
+		img: "../images/food-app(Nextjs)-project-05.png",
+		title: "Pizzaria app (NextJs)",
+		url: "https://pizzaria-dondani.vercel.app/",
+		urlGithub: "https://github.com/DanielLourencoFil/Food-Order-App",
 	},
 ];
 
@@ -119,6 +119,12 @@ const dataProjectsOriginal = [
 export const dataProjects = dataProjectsOriginal.reverse();
 
 export const dataProjectsWebPages = [
+	{
+		img: "../images/food-app(Nextjs)-project-05.png",
+		title: "Pizzaria app (NextJs)",
+		url: "https://pizzaria-dondani.vercel.app/",
+		urlGithub: "https://github.com/DanielLourencoFil/Food-Order-App",
+	},
 	{
 		img: "../images/market-place-project-03.png",
 		title: "Market Place App",
