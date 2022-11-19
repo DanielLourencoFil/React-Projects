@@ -165,6 +165,12 @@ export const dataProjectsWebPages = [
 		url: "https://pokemon-app-nextjs-pearl.vercel.app/",
 		urlGithub: "https://github.com/DanielLourencoFil/Pokemon-App-NextJs-",
 	},
+	{
+		img: "../images/21-monty-hall-app.png",
+		title: "Monty Hall App (NextJs)",
+		url: "https://monty-hall-app.vercel.app/",
+		urlGithub: "https://github.com/DanielLourencoFil/Monty-hall-app",
+	},
 ];
 
 // {
