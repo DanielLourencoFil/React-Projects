@@ -126,6 +126,12 @@ export const dataProjectsWebPages = [
 		urlGithub: "https://github.com/DanielLourencoFil/Food-Order-App",
 	},
 	{
+		img: "../images/future-project-06.png",
+		title: "Future - Landing Page",
+		url: "https://future-landing-page.vercel.app/",
+		urlGithub: "https://github.com/DanielLourencoFil/future-landing-page",
+	},
+	{
 		img: "../images/market-place-project-03.png",
 		title: "Market Place App",
 		url: "https://house-market-place-app.netlify.app/",
