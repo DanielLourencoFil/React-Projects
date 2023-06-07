@@ -49,20 +49,23 @@ porfolio!`,
 			setIsName(false);
 			// typingEffect(textArray, titleRef, subRef);
 			setIsPopUp(false);
-		}, 300);
+		}, 500);
 		return () => {
 			clearTimeout(timeout);
 		};
 	};
 	useEffect(() => {
 		let timeout;
-		clearTimeout(timeout);
+		// clearTimeout(timeout);
 		timeout = setTimeout(() => {
 			typingEffect(textArray, titleRef, subRef);
 		}, 1500);
+
 		return () => {
 			clearTimeout(timeout);
 		};
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [visitorName]);
 
 	return (
