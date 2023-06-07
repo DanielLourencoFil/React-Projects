@@ -20,7 +20,6 @@ const Landing = ({
 	const [isPopUp, setIsPopUp] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
 	const landingRef = useRef();
-
 	const titleRef = useRef();
 	const subRef = useRef();
 
@@ -49,17 +48,19 @@ porfolio!`,
 			setIsName(false);
 			// typingEffect(textArray, titleRef, subRef);
 			setIsPopUp(false);
-		}, 500);
+		}, 300);
 		return () => {
 			clearTimeout(timeout);
 		};
 	};
 	useEffect(() => {
+		console.log(textArray);
 		let timeout;
 		// clearTimeout(timeout);
+		// typingEffect(textArray, titleRef, subRef);
 		timeout = setTimeout(() => {
 			typingEffect(textArray, titleRef, subRef);
-		}, 1500);
+		}, 1000);
 
 		return () => {
 			clearTimeout(timeout);
