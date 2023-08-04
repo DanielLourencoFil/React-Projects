@@ -120,6 +120,12 @@ export const dataProjects = dataProjectsOriginal.reverse();
 
 export const dataProjectsWebPages = [
 	{
+		img: "../images/todos-vue-app.png",
+		title: "Todos App (Vue)",
+		url: "https://todos-vue-app.netlify.app/",
+		urlGithub: "https://github.com/DanielLourencoFil/todos-vue",
+	},
+	{
 		img: "../images/food-app(Nextjs)-project-05.png",
 		title: "Pizzaria app (NextJs)",
 		url: "https://pizzaria-dondani.vercel.app/",

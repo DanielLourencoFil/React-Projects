@@ -87,6 +87,9 @@
 .check-length {
 	font-size: 0.75rem;
 	margin-top: 0.35rem;
+	width: 80px;
+	padding: 2px;
+	border-radius: 0.5rem;
 }
 @keyframes popup {
 	0% {

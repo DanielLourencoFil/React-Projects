@@ -45,8 +45,8 @@ porfolio!`,
 		setVisitorName(text);
 		//call typing again
 		const timeout = setTimeout(() => {
-			setIsName(false);
 			// typingEffect(textArray, titleRef, subRef);
+			setIsName(false);
 			setIsPopUp(false);
 		}, 300);
 		return () => {
@@ -55,12 +55,11 @@ porfolio!`,
 	};
 	useEffect(() => {
 		console.log(textArray);
-		let timeout;
-		// clearTimeout(timeout);
-		// typingEffect(textArray, titleRef, subRef);
-		timeout = setTimeout(() => {
+
+		const timeout = setTimeout(() => {
 			typingEffect(textArray, titleRef, subRef);
-		}, 1000);
+			console.log("is 1500 secs");
+		}, 1500);
 
 		return () => {
 			clearTimeout(timeout);

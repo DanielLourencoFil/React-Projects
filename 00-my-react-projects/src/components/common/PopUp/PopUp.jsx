@@ -45,7 +45,10 @@ const PopUp = ({ handleSubmit, setIsPopUp }) => {
 						onFocus={() => resize()}
 					/>
 					<button
-						className={`popup-btn ${!text && "disabled"}`}
+						className={`popup-btn ${
+							(!text || text?.length > length || text.length === 0) &&
+							"disabled"
+						}`}
 						disabled={!text ? true : false}
 						onClick={(e) => checkSubmit(e)}
 					>
@@ -55,7 +58,9 @@ const PopUp = ({ handleSubmit, setIsPopUp }) => {
 				{/* </div> */}
 				<p
 					className="check-length"
-					style={{ color: `${text.length > length ? "#e9b949" : ""}` }}
+					style={{
+						backgroundColor: `${text.length > length ? "#fa1a1a" : ""}`,
+					}}
 				>
 					{text ? text.length : 0} / {length} max
 				</p>
