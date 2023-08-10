@@ -59,8 +59,13 @@
 	top: 115%;
 	z-index: 0;
 }
+.show-vue-projects-btn {
+	opacity: 1;
+	top: 225%;
+	z-index: 0;
+}
 .show-vanilla-projects-btn {
 	opacity: 1;
 	z-index: 0;
-	top: 225%;
+	top: 335%;
 }

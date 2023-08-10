@@ -36,6 +36,14 @@ const About = ({ isAbout, showProjectsBtn, setShowProjectsBtn }) => {
 						React JS
 					</Link>
 					<Link
+						to="/vue-projects"
+						className={`landing-btn generic-01-btn projects-btn react-projects-btn  ${
+							showProjectsBtn && "show-vue-projects-btn"
+						}`}
+					>
+						Vue JS
+					</Link>
+					<Link
 						to="/vanilla-js-projects"
 						className={`landing-btn generic-01-btn projects-btn vanilla-projects-btn  ${
 							showProjectsBtn && "show-vanilla-projects-btn"

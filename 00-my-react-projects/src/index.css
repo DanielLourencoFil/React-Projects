@@ -63,7 +63,7 @@ a {
 }
 a:active,
 a:visited {
-	color: inherit;
+	color: none;
 }
 li {
 	list-style: none;
