@@ -83,6 +83,11 @@ const NavBar = ({ setIsAbout, setShowProjectsBtn }) => {
 							React Js Projects
 						</li>
 					</Link>
+					<Link to="/vue-projects">
+						<li className="navlinks" onClick={() => setToggle(false)}>
+							Vue Js Projects
+						</li>
+					</Link>
 					<Link to="/vanilla-js-projects">
 						<li className="navlinks" onClick={() => setToggle(false)}>
 							Vanilla Js Projects

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Loading from "./components/common/loading/Loading";
 import Landing from "./pages/Landing/Landing";
 import ReactProjects from "./pages/reactProjects/ReactProjects";
+import VueProjects from "./pages/vueProjects/VueProjects";
 import VanillaJSProjects from "./pages/vanillaJSProjects/VanillaJSProjects";
 import SharedDesign from "./pages/SharedDesign/SharedDesign";
 import Contact from "./components/Contact/Contact";
@@ -42,6 +43,7 @@ const App = () => {
 							}
 						/>
 						<Route path="/react-projects" element={<ReactProjects />} />
+						<Route path="/vue-projects" element={<VueProjects />} />
 						<Route
 							path="/vanilla-js-projects"
 							element={<VanillaJSProjects />}
