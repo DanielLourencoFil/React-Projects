@@ -23,8 +23,22 @@ const Landing = ({
 	const titleRef = useRef();
 	const subRef = useRef();
 
+	let textArray = [
+		`Hello ${visitorName || 'World!'}|I'm Daniel
+Welcome to my
+portfolio!`,
+		`Hallo ${visitorName || 'Welt!'}|Ich bin Daniel
+willkommen in meinen
+Portfolio!`,
+		`Ola ${visitorName || 'Mundo!'}|Eu sou Daniel
+bem vindo ao meu
+portfolio!`,
+		`¡Hola ${visitorName || 'Mundo!'}|Soy Daniel
+bienvenido a mi
+porfolio!`,
+	];
+
 	const handleSubmitVisitorName = (text) => {
-		setVisitorName('');
 		// cancel previous function call by deleting text refs from DOM
 		setIsName(true);
 		// set new text
@@ -40,30 +54,15 @@ const Landing = ({
 		};
 	};
 	useEffect(() => {
-		let textArray = [
-			`Hello ${visitorName || 'World!'}|I'm Daniel
-	Welcome to my
-	portfolio!`,
-			`Ola ${visitorName || 'Mundo!'}|Eu sou Daniel
-	bem vindo ao meu
-	portfolio!`,
-			`Hallo ${visitorName || 'Welt!'}|Ich bin Daniel
-	willkommen in meinen
-	Portfolio!`,
-			`¡Hola ${visitorName || 'Mundo!'}|Soy Daniel
-	bienvenido a mi
-	porfolio!`,
-		];
-		console.log(textArray);
-
 		const timeout = setTimeout(() => {
+			clearTimeout(timeout);
 			typingEffect(textArray, titleRef, subRef);
 			console.log('is 1500 secs');
 		}, 1500);
 
-		return () => {
-			clearTimeout(timeout);
-		};
+		// return () => {
+		// 	clearTimeout(timeout);
+		// };
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [visitorName]);

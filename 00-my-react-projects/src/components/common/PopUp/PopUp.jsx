@@ -1,18 +1,17 @@
-import { useState, useRef } from "react";
-import { FaTimes } from "react-icons/fa";
-import "./PopUp.css";
+import { useState, useRef } from 'react';
+import { FaTimes } from 'react-icons/fa';
+import './PopUp.css';
 
 const PopUp = ({ handleSubmit, setIsPopUp }) => {
-	const [text, setText] = useState("");
+	const [text, setText] = useState('');
 	const [isResize, setIsResize] = useState(false);
 	const inputRef = useRef();
 	const length = 10;
 
 	const checkSubmit = (e) => {
 		e.preventDefault();
-
 		if (text && text.length <= length) {
-			handleSubmit(text + "!");
+			handleSubmit(text + '!');
 		} else {
 			return;
 		}
@@ -30,7 +29,7 @@ const PopUp = ({ handleSubmit, setIsPopUp }) => {
 				/>
 				<div className="input-and-btn-container">
 					<label
-						className={`popup-label ${isResize && "resize"}`}
+						className={`popup-label ${isResize && 'resize'}`}
 						htmlFor="input"
 						onClick={() => resize()}
 					>
@@ -47,7 +46,7 @@ const PopUp = ({ handleSubmit, setIsPopUp }) => {
 					<button
 						className={`popup-btn ${
 							(!text || text?.length > length || text.length === 0) &&
-							"disabled"
+							'disabled'
 						}`}
 						disabled={!text ? true : false}
 						onClick={(e) => checkSubmit(e)}
@@ -59,7 +58,7 @@ const PopUp = ({ handleSubmit, setIsPopUp }) => {
 				<p
 					className="check-length"
 					style={{
-						backgroundColor: `${text.length > length ? "#fa1a1a" : ""}`,
+						backgroundColor: `${text.length > length ? '#fa1a1a' : ''}`,
 					}}
 				>
 					{text ? text.length : 0} / {length} max
