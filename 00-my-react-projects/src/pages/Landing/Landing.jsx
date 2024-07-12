@@ -1,21 +1,21 @@
-import "./Landing.css";
-import { useEffect, useState, useRef } from "react";
-import typingEffect from "../../utils/typingEffect";
+import './Landing.css';
+import { useEffect, useState, useRef } from 'react';
+import typingEffect from '../../utils/typingEffect';
 import {
 	PopUp,
 	GoToSectionBtn,
 	BackTopBtn,
-} from "../../components/common/common";
-import { FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { Skills, About } from "../../components";
+} from '../../components/common/common';
+import { FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { Skills, About } from '../../components';
 const Landing = ({
 	isAbout,
 	setIsAbout,
 	showProjectsBtn,
 	setShowProjectsBtn,
 }) => {
-	const [visitorName, setVisitorName] = useState("");
+	const [visitorName, setVisitorName] = useState('');
 	const [isName, setIsName] = useState(false);
 	const [isPopUp, setIsPopUp] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
@@ -24,21 +24,22 @@ const Landing = ({
 	const subRef = useRef();
 
 	let textArray = [
-		`Hello ${visitorName || "World!"}|I'm Daniel
+		`Hello ${visitorName || 'World!'}|I'm Daniel
 Welcome to my
 portfolio!`,
-		`Ola ${visitorName || "Mundo!"}|Eu sou Daniel
+		`Ola ${visitorName || 'Mundo!'}|Eu sou Daniel
 bem vindo ao meu
 portfolio!`,
-		`Hallo ${visitorName || "Welt!"}|Ich bin Daniel
+		`Hallo ${visitorName || 'Welt!'}|Ich bin Daniel
 willkommen in meinen
 Portfolio!`,
-		`¡Hola ${visitorName || "Mundo!"}|Soy Daniel
+		`¡Hola ${visitorName || 'Mundo!'}|Soy Daniel
 bienvenido a mi
 porfolio!`,
 	];
 
 	const handleSubmitVisitorName = (text) => {
+		setVisitorName('');
 		// cancel previous function call by deleting text refs from DOM
 		setIsName(true);
 		// set new text
@@ -58,7 +59,7 @@ porfolio!`,
 
 		const timeout = setTimeout(() => {
 			typingEffect(textArray, titleRef, subRef);
-			console.log("is 1500 secs");
+			console.log('is 1500 secs');
 		}, 1500);
 
 		return () => {
@@ -97,7 +98,7 @@ porfolio!`,
 					<div
 						id="landing-photo-section"
 						className="landing-photo-section"
-						style={{ height: `${isOpen ? "130vh" : "100vh"}` }}
+						style={{ height: `${isOpen ? '130vh' : '100vh'}` }}
 					>
 						<div className="outer-btn-wrapper">
 							<div className="outer-border-container">
@@ -114,7 +115,7 @@ porfolio!`,
 							{/* BIG SCREEN BTN */}
 							<button
 								className={` hire-btn landing-btn generic-01-btn hide-btn  ${
-									!isAbout && "show-hire-btn-big-screen"
+									!isAbout && 'show-hire-btn-big-screen'
 								}`}
 								onClick={() => setIsAbout(true)}
 							>
@@ -123,7 +124,7 @@ porfolio!`,
 							<Link to="/contact">
 								<button
 									className={`hire-btn landing-btn generic-01-btn hide-btn  ${
-										isAbout && "show-hire-btn-big-screen"
+										isAbout && 'show-hire-btn-big-screen'
 									}`}
 								>
 									Hire Me!
@@ -131,9 +132,9 @@ porfolio!`,
 							</Link>
 						</div>
 						{/* ONLY MOBILE SCREEN */}
-						<div className={`landing-photo-text ${isOpen && "isOpen"} mobile`}>
+						<div className={`landing-photo-text ${isOpen && 'isOpen'} mobile`}>
 							<FaTimes
-								className={`open-btn ${isOpen && "isOpen-btn"}`}
+								className={`open-btn ${isOpen && 'isOpen-btn'}`}
 								onClick={() => setIsOpen(!isOpen)}
 							/>
 							{!isOpen ? (
@@ -171,7 +172,7 @@ porfolio!`,
 								<Link
 									to="/react-projects"
 									className={`landing-btn generic-01-btn projects-btn react-projects-btn  ${
-										showProjectsBtn && "show-react-projects-btn"
+										showProjectsBtn && 'show-react-projects-btn'
 									}`}
 								>
 									React JS
@@ -179,10 +180,10 @@ porfolio!`,
 								<Link
 									to="/vanilla-js-projects"
 									className={`landing-btn generic-01-btn projects-btn vanilla-projects-btn  ${
-										showProjectsBtn && "show-vanilla-projects-btn"
+										showProjectsBtn && 'show-vanilla-projects-btn'
 									}`}
 								>
-									Vanilla JS{" "}
+									Vanilla JS{' '}
 								</Link>
 							</div>
 							<Link to="/contact">
@@ -196,7 +197,7 @@ porfolio!`,
 					</div>
 					{/* BIG SCREEN BTN */}
 					<GoToSectionBtn
-						hide={"big-screen"}
+						hide={'big-screen'}
 						animationOnClick={isAbout}
 						setIsAbout={setIsAbout}
 						isAbout={isAbout}

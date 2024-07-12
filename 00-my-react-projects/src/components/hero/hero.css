@@ -33,13 +33,13 @@
 		spining-logo 30s linear infinite;
 }
 
-.hero-title {
+.hero-title-react {
 	font-size: 2rem;
 	font-weight: 700;
 	letter-spacing: 2px;
 	color: var(--color-one-500a);
 }
-.hero-text {
+.hero-text-react {
 	max-width: 90%;
 	font-size: 1.25rem;
 	line-height: 1.5;
@@ -47,12 +47,12 @@
 	color: var(--color-grey-200);
 	margin: 0 auto;
 }
-.hero-text span {
+.hero-text-react span {
 	letter-spacing: 3px;
 	font-weight: 700;
 	border-bottom: 2px solid var(--color-one-500a);
 }
-.hero-btn {
+.hero-btn-react {
 	border: 2px solid var(--color-one-500);
 	background-color: var(--color-one-500);
 	color: var(--color-grey-200);
@@ -64,7 +64,7 @@
 	will-change: contents;
 	transition: all 0.5s;
 }
-.hero-btn:hover {
+.hero-btn-react:hover {
 	border-color: var(--color-one-500a);
 	background-color: var(--color-one-500a);
 	color: var(--color-one-500);
