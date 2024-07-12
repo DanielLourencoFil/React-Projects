@@ -23,21 +23,6 @@ const Landing = ({
 	const titleRef = useRef();
 	const subRef = useRef();
 
-	let textArray = [
-		`Hello ${visitorName || 'World!'}|I'm Daniel
-Welcome to my
-portfolio!`,
-		`Ola ${visitorName || 'Mundo!'}|Eu sou Daniel
-bem vindo ao meu
-portfolio!`,
-		`Hallo ${visitorName || 'Welt!'}|Ich bin Daniel
-willkommen in meinen
-Portfolio!`,
-		`¡Hola ${visitorName || 'Mundo!'}|Soy Daniel
-bienvenido a mi
-porfolio!`,
-	];
-
 	const handleSubmitVisitorName = (text) => {
 		setVisitorName('');
 		// cancel previous function call by deleting text refs from DOM
@@ -55,6 +40,20 @@ porfolio!`,
 		};
 	};
 	useEffect(() => {
+		let textArray = [
+			`Hello ${visitorName || 'World!'}|I'm Daniel
+	Welcome to my
+	portfolio!`,
+			`Ola ${visitorName || 'Mundo!'}|Eu sou Daniel
+	bem vindo ao meu
+	portfolio!`,
+			`Hallo ${visitorName || 'Welt!'}|Ich bin Daniel
+	willkommen in meinen
+	Portfolio!`,
+			`¡Hola ${visitorName || 'Mundo!'}|Soy Daniel
+	bienvenido a mi
+	porfolio!`,
+		];
 		console.log(textArray);
 
 		const timeout = setTimeout(() => {
