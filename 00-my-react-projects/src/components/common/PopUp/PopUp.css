@@ -45,10 +45,10 @@
 	color: var(--color-light-100);
 }
 .popup-input {
-	font-size: 1rem;
+	font-size: 1.5rem;
 	letter-spacing: var(--spacing-100);
 	width: 75%;
-	height: 1.75rem;
+	height: 2.75rem;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 	border: transparent;
@@ -59,7 +59,8 @@
 }
 .popup-btn {
 	width: 25%;
-	height: 1.75rem;
+
+	height: 2.75rem;
 	font-size: 0.875rem;
 	border: transparent;
 	border-top-right-radius: 5px;
@@ -74,10 +75,10 @@
 }
 .popup-close-btn {
 	position: absolute;
-	font-size: 1.25rem;
+	font-size: 2rem;
 	top: 0;
 	right: 0;
-	margin: 1rem 1.5rem;
+	margin: 3rem 4rem;
 	cursor: pointer;
 	transition: color 0.3s;
 }

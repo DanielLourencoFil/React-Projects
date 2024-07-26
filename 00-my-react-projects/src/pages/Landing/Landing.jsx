@@ -23,19 +23,28 @@ const Landing = ({
 	const titleRef = useRef();
 	const subRef = useRef();
 
+	// 	let textArray = [
+	// 		`Hello ${visitorName || 'World!'}|I'm Daniel
+	// Welcome to my
+	// portfolio!`,
+	// 		`Hallo ${visitorName || 'Welt!'}|Ich bin Daniel
+	// willkommen in meinen
+	// Portfolio!`,
+	// 		`Ola ${visitorName || 'Mundo!'}|Eu sou Daniel
+	// bem vindo ao meu
+	// portfolio!`,
+	// 		`¡Hola ${visitorName || 'Mundo!'}|Soy Daniel
+	// bienvenido a mi
+	// porfolio!`,
+	// 	];
+
 	let textArray = [
-		`Hello ${visitorName || 'World!'}|I'm Daniel
-Welcome to my
-portfolio!`,
-		`Hallo ${visitorName || 'Welt!'}|Ich bin Daniel
-willkommen in meinen
-Portfolio!`,
-		`Ola ${visitorName || 'Mundo!'}|Eu sou Daniel
-bem vindo ao meu
-portfolio!`,
-		`¡Hola ${visitorName || 'Mundo!'}|Soy Daniel
-bienvenido a mi
-porfolio!`,
+		`Hello ${visitorName || 'World!'}|I'm Daniel\nWelcome to my portfolio!`,
+		`Hallo ${
+			visitorName || 'Welt!'
+		}|Ich bin Daniel\nWillkommen in meinem Portfolio!`,
+		`Olá ${visitorName || 'Mundo!'}|Eu sou Daniel\nBem-vindo ao meu portfólio!`,
+		`¡Hola ${visitorName || 'Mundo!'}|Soy Daniel\nBienvenido a mi portafolio!`,
 	];
 
 	const handleSubmitVisitorName = (text) => {
